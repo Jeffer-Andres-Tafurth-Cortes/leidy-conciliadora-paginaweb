@@ -1,0 +1,173 @@
+/* ============================
+   HERO GENERAL
+============================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6a502a; /* Texto en café oscuro */
+  text-align: center;
+  overflow: hidden;
+  padding: 0 15px;
+  background: #e3d5ca; /* Color principal */
+  box-sizing: border-box;
+}
+
+/* ============================
+   VIDEO DE FONDO
+============================ */
+.videoBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.55;
+  z-index: 1;
+  background: #e3d5ca; /* Color principal detrás del video */
+}
+
+/* ============================
+   OVERLAY
+============================ */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(106, 80, 42, 0.25); /* Café oscuro suave */
+  z-index: 1;
+}
+
+/* ============================
+   CONTENEDOR DE TEXTO
+============================ */
+.content {
+  position: relative;
+  z-index: 5;
+  background-color: rgba(249, 248, 247, 0.55); /* #f9f8f7 translúcido */
+  padding: 45px 35px;
+  border-radius: 14px;
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(106, 80, 42, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* ============================
+   TITULOS Y TEXTO
+============================ */
+.mainTitle {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 22px;
+  line-height: 1.25;
+  color: #6a502a; /* Café elegante */
+}
+
+.paragraph {
+  font-size: clamp(0.95rem, 2.3vw, 1.1rem);
+  line-height: 1.7;
+  margin-bottom: 18px;
+  opacity: 0.9;
+  color: #6a502a;
+}
+
+.finalPhrase {
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  margin-top: 22px;
+  margin-bottom: 28px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #6a502a;
+}
+
+/* ============================
+   BOTÓN CTA
+============================ */
+.ctaButton {
+  display: inline-block;
+  background: linear-gradient(90deg, #cf79e7, #f1c98d);
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #6a502a;
+  border: 2px solid #6a502a;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ctaButton:hover {
+  background: #6a502a; /* Café oscuro */
+  color: #f9f8f7; /* Casi blanco */
+  border-color: #6a502a;
+  transform: translateY(-3px);
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 992px) {
+  .content {
+    max-width: 680px;
+    padding: 35px 28px;
+  }
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 40px 12px;
+  }
+
+  .content {
+    max-width: 94vw;
+    padding: 28px 18px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+/* MÓVILES */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 70vh;
+    padding: 20px 8px;
+  }
+
+  .content {
+    max-width: 98vw;
+    padding: 22px 12px;
+    border-radius: 10px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 14px;
+  }
+}
+
+/* EXTRA PEQUEÑOS */
+@media (max-width: 360px) {
+  .content {
+    max-width: 99vw;
+    padding: 18px 10px;
+  }
+}

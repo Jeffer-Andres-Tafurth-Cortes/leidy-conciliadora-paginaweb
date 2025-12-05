@@ -1,0 +1,121 @@
+/* ===========================
+      TOP BAR PRINCIPAL
+=========================== */
+
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #6a502a; /* Marrón corporativo */
+  color: #f9f8f7;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px 30px;
+  font-size: 14px;
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 2px solid #f1c98d; /* Dorado claro como acento */
+}
+
+/* ===========================
+        SECCIONES
+=========================== */
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ===========================
+        ICONOS
+=========================== */
+
+.icon {
+  height: 15px;
+  width: auto;
+}
+
+.emailLink {
+  color: #f9f8f7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.emailLink:hover {
+  color: #cf79e7; /* Púrpura en hover */
+}
+
+.socialIcon {
+  height: 22px;
+  width: auto;
+  color: #f9f8f7;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.socialIcon:hover {
+  color: #f1c98d; /* Dorado corporativo */
+  transform: translateY(-2px);
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .topBar {
+    padding: 4px 20px;
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .leftSection {
+    display: none;
+  }
+
+  .rightSection {
+    gap: 10px;
+  }
+
+  .socialIcon {
+    height: 18px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .topBar {
+    flex-direction: column;
+    padding: 4px 10px;
+    font-size: 11px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .leftSection {
+    display: none;
+  }
+
+  .rightSection {
+    gap: 12px;
+  }
+
+  .socialIcon {
+    height: 16px;
+  }
+}

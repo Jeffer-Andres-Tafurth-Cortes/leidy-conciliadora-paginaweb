@@ -1,0 +1,100 @@
+/* ============================
+   CONTENEDOR GENERAL (CENTRADO TOTAL)
+============================ */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 30px;
+  background: #e3d5ca; /* Color principal */
+  border-radius: 22px;
+  box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.12);
+  text-align: center;
+
+  /* CENTRADO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+
+  border: 2px solid #f1c98d;
+}
+
+/* ============================
+   TÍTULO
+============================ */
+.title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: #6a502a; /* Café elegante */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Línea decorativa opcional */
+.title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #cf79e7;
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* ============================
+   PÁRRAFOS
+============================ */
+.paragraph {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  line-height: 1.7;
+  color: #6a502a;
+  margin-bottom: 22px;
+  max-width: 750px;
+  text-align: center;
+  background: #f9f8f7;
+  padding: 15px 18px;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.paragraph strong {
+  color: #cf79e7;
+}
+
+/* ============================
+   BOTÓN CTA
+============================ */
+.ctaButton {
+  margin-top: 25px;
+  padding: 14px 36px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  background-color: #cf79e7; /* botón destacado */
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.ctaButton:hover {
+  background-color: #b865d7;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ============================
+   RESPONSIVE EXTRA
+============================ */
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 18px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 260px;
+  }
+}

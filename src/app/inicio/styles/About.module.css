@@ -1,0 +1,269 @@
+/* =============================
+   CONTENEDOR GENERAL
+============================= */
+.wrapper {
+  width: 100%;
+  background-color: #e3d5ca; /* PRINCIPAL */
+  padding: 80px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* =============================
+   BARRA DE FASES
+============================= */
+.stepsBar {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 48px;
+  box-sizing: border-box;
+}
+
+/* =============================
+   FASE INDIVIDUAL
+============================= */
+.stepItem {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  background: #f9f8f7; /* suave, limpio */
+  padding: 22px 16px;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 700;
+  color: #6a502a; /* café elegante */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #f1c98d;
+}
+
+/* FLECHAS */
+.stepItem::after {
+  content: "➜";
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #cf79e7; /* lila fuerte */
+  font-weight: bold;
+}
+
+.stepItem:last-child::after {
+  display: none;
+}
+
+/* =============================
+   NÚMERO CÍRCULO
+============================= */
+.stepNumber {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  background-color: #cf79e7; /* lila */
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(207, 121, 231, 0.4);
+}
+
+/* =============================
+   CONTENIDO TEXTO + IMAGEN
+============================= */
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* TEXTO */
+.contentBox {
+  width: 52%;
+  background: #f9f8f7;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.13);
+  border: 2px solid #f1c98d;
+}
+
+/* =============================
+   CONTENEDOR IMAGEN
+============================= */
+.imageContainer {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  display: block;
+}
+
+/* =============================
+   TÍTULO
+============================= */
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #6a502a; /* café */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Línea decorativa */
+.title::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 70px;
+  height: 4px;
+  background: #cf79e7;
+  border-radius: 2px;
+}
+
+/* =============================
+   TEXTO
+============================= */
+.paragraph {
+  color: #6a502a;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* =============================
+   BOTÓN CTA
+============================= */
+.ctaButton {
+  margin-top: 18px;
+  padding: 14px 34px;
+  background: #cf79e7;
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(207, 121, 231, 0.35);
+}
+
+.ctaButton:hover {
+  background: #b765d5;
+  transform: translateY(-3px);
+}
+
+/* =============================
+   TABLET
+============================= */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .contentBox,
+  .imageContainer {
+    width: 100%;
+  }
+
+  .imageContainer img {
+    max-height: 380px;
+  }
+}
+
+/* =============================
+   MÓVILES
+============================= */
+@media (max-width: 768px) {
+  .stepsBar {
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+  }
+
+  .stepItem {
+    max-width: 90%;
+  }
+
+  .stepItem::after {
+    content: "↓";
+    right: 50%;
+    bottom: -28px;
+    top: auto;
+    transform: translateX(50%);
+  }
+
+  .contentBox {
+    padding: 28px 20px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+
+  .imageContainer img {
+    max-height: 320px;
+  }
+}
+
+/* =============================
+   TELÉFONOS PEQUEÑOS
+============================= */
+@media (max-width: 480px) {
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .stepsBar {
+    gap: 36px;
+  }
+
+  .stepNumber {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .imageContainer img {
+    max-height: 260px;
+  }
+}
