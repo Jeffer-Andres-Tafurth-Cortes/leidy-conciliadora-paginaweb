@@ -1,137 +1,60 @@
-/* ===========================
-   CONTENEDOR GENERAL
-=========================== */
 .container {
   max-width: 1100px;
-  margin: 100px auto;
-  padding: 0 20px;
+  margin: calc(var(--navbar-height) + 40px) auto;
+  padding: 0 16px;
   text-align: center;
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: #000;
+  color: var(--c-brown);
   box-sizing: border-box;
 }
-
-/* Fondo general con tono principal */
-body {
-  background: #e3d5ca;
-}
-
-/* ===========================
-   TITULO PRINCIPAL
-=========================== */
 .mainTitle {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 50px;
-  color: #6a502a;
-  letter-spacing: -0.5px;
-  line-height: 1.25;
-
-  padding-bottom: 10px;
-  border-bottom: 4px solid #cf79e7; /* Acento morado suave */
+  font-size: 34px;
+  color: var(--c-brown);
+  border-bottom: 4px solid var(--c-purple);
   display: inline-block;
+  margin-bottom: 28px;
+  padding-bottom: 6px;
 }
-
-/* ===========================
-   GRID DE SERVICIOS
-=========================== */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  margin-bottom: 55px;
-  justify-items: center;
+  gap: 22px;
+  margin-bottom: 40px;
 }
-
-/* ===========================
-   ITEM
-=========================== */
 .item {
-  width: 100%;
-  max-width: 100%;
-  background: rgba(249, 248, 247, 0.45); /* #f9f8f7 translúcido */
-  padding: 22px 24px;
-  border-radius: 16px;
-  font-size: 17px;
-  line-height: 1.6;
-
-  border: 1px solid rgba(106, 80, 42, 0.25); /* borde café suave */
-  backdrop-filter: blur(6px);
-
+  background: rgba(249, 248, 247, 0.6);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(106, 80, 42, 0.12);
   display: flex;
   gap: 14px;
-  align-items: flex-start;
-  transition: 0.25s ease;
-  box-sizing: border-box;
   text-align: left;
+  align-items: flex-start;
 }
-
 .item:hover {
-  background: rgba(249, 248, 247, 0.65);
-  border-color: #cf79e7;
+  border-color: var(--c-purple);
   transform: translateY(-3px);
 }
-
-/* ===========================
-   ICONO
-=========================== */
 .icon {
-  color: #6a502a; /* Café principal */
-  font-size: 22px;
-  flex-shrink: 0;
+  color: var(--c-brown);
+  font-size: 20px;
 }
-
-/* ===========================
-   BOTÓN CTA
-=========================== */
-.buttonWrapper {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-}
-
 .ctaButton {
-  display: inline-block;
-  background: linear-gradient(90deg, #cf79e7, #f1c98d);
-  padding: 15px 38px;
-  border-radius: 32px;
-  font-size: 17px;
-  font-weight: 700;
-  color: #000;
-  text-decoration: none;
-  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, var(--c-purple), var(--c-gold));
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: var(--c-black);
+  border: 2px solid var(--c-brown);
   cursor: pointer;
-
-  border: 2px solid #6a502a;
-  transition: 0.25s ease;
 }
-
 .ctaButton:hover {
-  background: #6a502a;
-  color: #f9f8f7;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  background: var(--c-brown);
+  color: var(--c-cream);
 }
-
-/* ===========================
-   RESPONSIVE
-=========================== */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
-
-  .item {
-    width: 100%;
-  }
-
-  .mainTitle {
-    font-size: 28px;
-    margin-bottom: 35px;
-  }
-
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-top: calc(var(--navbar-height) + 22px);
   }
 }

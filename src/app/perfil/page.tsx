@@ -8,7 +8,7 @@ export default function Perfil() {
       {/* COLUMNA IZQUIERDA */}
       <div className={styles.leftColumn}>
         <div className={styles.photoFrame}>
-          <img src="/tu-imagen.jpg" alt="Doc. Leidy" />
+          <img src="/doc-leidy.jpg" alt="Doc. Leidy" />
         </div>
 
         <div className={styles.contactBox}>
@@ -25,8 +25,7 @@ export default function Perfil() {
       <div className={styles.rightColumn}>
         <p className={styles.bioText}>
           La Abogada Sierra obtuvo su B.A. (Diploma Universitario) con énfasis
-          en Ciencias Políticas y Estudios Latino-Americanos en el año 1997 del
-          Colegio Universitario Pitzer en California...
+          en Ciencias Políticas y Estudios Latino-Americanos...
         </p>
 
         <h3 className={styles.sectionTitle}>Licencias:</h3>

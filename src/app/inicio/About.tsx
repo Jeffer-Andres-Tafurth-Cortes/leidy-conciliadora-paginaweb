@@ -46,7 +46,7 @@ const About = () => {
 
         {/* Imagen */}
         <div className={styles.imageContainer}>
-          <img src="/tu-imagen.jpg" alt="Dra. Leidy" />
+          <img src="/doc-leidy.jpg" alt="Dra. Leidy" />
         </div>
       </div>
     </section>

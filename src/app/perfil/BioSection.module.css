@@ -1,112 +1,80 @@
-/* ============================
-   WRAPPER GENERAL
-================================ */
 .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: calc(var(--navbar-height) + 20px);
   display: grid;
   grid-template-columns: 380px 1fr;
-  gap: 40px;
-  padding: 50px 20px;
-  background: #f9f8f7;
+  gap: 30px;
+  padding: 40px 18px;
+  background: var(--c-cream);
+  border-radius: 14px;
+  box-sizing: border-box;
+  align-items: start;
 }
 
-/* ============================
-   COLUMNA IZQUIERDA
-================================ */
 .leftColumn {
+  position: sticky;
+  top: calc(var(--navbar-height) + 12px);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+  align-items: center;
 }
 
-/* Marco con borde suave */
 .photoFrame {
-  background: #e3d5ca;
+  background: var(--c-primary);
   padding: 10px;
   border-radius: 12px;
+  width: 100%;
 }
-
 .photoFrame img {
   width: 100%;
   border-radius: 8px;
+  display: block;
 }
 
-/* Caja "Contáctenos" */
 .contactBox {
-  background: #ffffff;
-  border: 2px solid #e3d5ca;
-  border-radius: 12px;
-  padding: 25px;
+  background: #fff;
+  border: 2px solid var(--c-primary);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  width: 100%;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
-
 .contactBox h3 {
-  font-size: 1.6rem;
-  color: #6a502a;
+  color: var(--c-brown);
   margin-bottom: 10px;
 }
-
-.contactBox p {
-  margin-bottom: 20px;
-  color: #4a3e2c;
-}
-
-/* Botón */
 .contactButton {
-  display: block;
-  background: #cf79e7;
-  color: white;
-  padding: 12px 18px;
+  background: var(--c-purple);
+  color: #fff;
+  padding: 10px 16px;
   border-radius: 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: 0.3s ease;
+  border: none;
 }
-
 .contactButton:hover {
   background: #b868cd;
+  transform: translateY(-2px);
 }
 
-/* ============================
-   COLUMNA DERECHA
-================================ */
 .rightColumn {
+  padding-right: 8px;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 18px;
 }
-
-/* Títulos de secciones */
 .sectionTitle {
-  font-size: 1.4rem;
-  color: #6a502a;
+  color: var(--c-brown);
   font-weight: 700;
-  margin-top: 15px;
 }
 
-/* Párrafos */
-.bioText {
-  color: #3a2f22;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-/* Lista */
-.list li {
-  margin-bottom: 8px;
-  color: #3a2f22;
-}
-
-/* ============================
-   RESPONSIVE
-================================ */
 @media (max-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr;
   }
-
   .leftColumn {
-    align-items: center;
+    position: static;
+    top: auto;
   }
 }

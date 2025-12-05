@@ -39,14 +39,14 @@ const Footer: FC = () => {
         {/* Logo */}
         <div className={styles.logoSection}>
           <Image
-            src="/logopravice.png"
-            alt="Logo Pravice Abogados"
+            src="/"
+            alt="Dra. Leidy Tirado"
             className={styles.logo}
             width={100}
             height={80}
             priority={true}
           />
-          <p className={styles.subtitle}>ASESORES ESPECIALIZADOS</p>
+          <p className={styles.subtitle}>LEIDY TIRADO</p>
         </div>
 
         {/* Contáctanos */}
@@ -100,7 +100,7 @@ const Footer: FC = () => {
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
             <a
-              href="https://www.instagram.com/pravice_abogados/"
+              href="https://www.instagram.com/leidytuconciliadora/"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -126,7 +126,7 @@ const Footer: FC = () => {
 
           <blockquote
             className="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/pravice_abogados/"
+            data-instgrm-permalink="https://www.instagram.com/leidytuconciliadora/"
             data-instgrm-version="14"
             style={{
               background: "#fff",

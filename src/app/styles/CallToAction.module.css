@@ -1,107 +1,62 @@
 .ctaSection {
-  background: linear-gradient(135deg, #e3d5ca, #f9f8f7);
-  padding: 40px 20px;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-cream));
+  padding: 36px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contentWrapper {
-  background-color: #e3d5ca;
-  color: #6a502a;
-  max-width: 600px;
+  max-width: 720px;
   width: 100%;
-  padding: 50px 30px;
+  background: var(--c-primary);
+  padding: 40px;
   border-radius: 14px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(106, 80, 42, 0.12);
+  box-shadow: 0 12px 28px rgba(106, 80, 42, 0.08);
   border: 1px solid rgba(106, 80, 42, 0.06);
+  color: var(--c-brown);
 }
 
 .title {
-  font-size: 28px;
+  font-size: 26px;
+  color: var(--c-brown);
+  margin-bottom: 12px;
   font-weight: 700;
-  color: #6a502a;
-  margin-bottom: 16px;
   text-transform: uppercase;
 }
-
 .divider {
   width: 60px;
   height: 4px;
-  background-color: #f1c98d;
-  margin: 0 auto 20px;
+  background: var(--c-gold);
+  margin: 0 auto 18px;
   border-radius: 6px;
 }
-
-.subtitle {
-  font-size: 16px;
-  color: #6a502a;
-  margin-bottom: 14px;
-  opacity: 0.9;
-}
-
+.subtitle,
 .helpText {
-  font-size: 15px;
-  font-weight: 500;
-  color: #6a502a;
-  margin-bottom: 28px;
+  color: var(--c-brown);
+  margin-bottom: 12px;
 }
-
 .ctaButton {
-  background: linear-gradient(90deg, #f1c98d 0%, #cf79e7 100%);
-  border: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 16px;
+  background: linear-gradient(90deg, var(--c-gold), var(--c-purple));
+  color: var(--c-black);
+  padding: 12px 22px;
+  border-radius: 10px;
   font-weight: 700;
-  color: #000;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 18px rgba(106, 80, 42, 0.18);
 }
-
 .ctaButton:hover {
-  background-color: #6a502a;
-  color: #f9f8f7;
-  box-shadow: 0 8px 22px rgba(106, 80, 42, 0.28);
+  background: var(--c-brown);
+  color: var(--c-cream);
   transform: translateY(-2px);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 768px) {
   .contentWrapper {
-    padding: 40px 20px;
+    padding: 28px;
   }
-
-  .title {
-    font-size: 24px;
-  }
-
-  .subtitle,
-  .helpText {
-    font-size: 14px;
-  }
-
   .ctaButton {
     width: 100%;
-    padding: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 22px;
-  }
-
-  .divider {
-    width: 45px;
-  }
-
-  .ctaButton {
-    font-size: 15px;
   }
 }

@@ -1,93 +1,47 @@
-/* =============================== */
-/*   CONTENEDOR PRINCIPAL          */
-/* =============================== */
-
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
   max-width: 1200px;
-  margin: 100px auto;
-  padding: 0 20px;
-  color: #6a502a; /* texto principal */
-  background-color: #e3d5ca; /* color principal */
+  margin: calc(var(--navbar-height) + 60px) auto;
+  padding: 28px;
+  background: var(--c-primary);
   border-radius: 12px;
-  padding: 40px 35px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  color: var(--c-brown);
 }
-
-/* =============================== */
-/*   COLUMNA IZQUIERDA            */
-/* =============================== */
-
 .left {
   flex: 1;
-  text-align: left;
-  max-width: 550px;
 }
-
 .subtitle {
-  color: #cf79e7; /* lila elegante */
+  color: var(--c-purple);
   font-weight: 500;
-  font-size: 17px;
-  margin-bottom: 6px;
-  letter-spacing: 0.3px;
 }
-
 .title {
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 16px;
-  border-bottom: 2px solid #6a502a;
+  font-size: 30px;
+  color: var(--c-brown);
+  border-bottom: 2px solid var(--c-brown);
   display: inline-block;
-  color: #6a502a;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
 }
-
 .description {
-  color: #6a502a;
-  font-size: 16px;
+  color: var(--c-brown);
   line-height: 1.6;
-  margin-bottom: 25px;
-  max-width: 550px;
 }
-
-/* BOTÓN PRINCIPAL */
 .ctaButton {
-  background: #cf79e7;
-  color: #f9f8f7;
-  border: none;
-  padding: 12px 28px;
+  background: var(--c-purple);
+  color: var(--c-cream);
+  padding: 10px 18px;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 700;
+  border: none;
   cursor: pointer;
-  transition: 0.3s ease;
 }
-
 .ctaButton:hover {
   background: #b865d7;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
-
-/* =============================== */
-/*   COLUMNA DERECHA (LINEA TIEMPO) */
-/* =============================== */
-
 .right {
   flex: 1;
-  max-width: 450px;
 }
-
-.timeline {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
 .timeline::before {
   content: "";
   position: absolute;
@@ -95,109 +49,18 @@
   top: 0;
   width: 3px;
   height: 100%;
-  background: #6a502a;
+  background: var(--c-brown);
+  opacity: 0.28;
   border-radius: 3px;
-  opacity: 0.3;
 }
-
-/* =============================== */
-/*   ITEM DEL TIMELINE             */
-/* =============================== */
-
-.timelineItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  margin-bottom: 32px;
-  position: relative;
-  animation: fadeSlideIn 0.6s ease forwards;
-  opacity: 0;
-}
-
-.timelineItem:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.timelineItem:nth-child(2) {
-  animation-delay: 0.25s;
-}
-.timelineItem:nth-child(3) {
-  animation-delay: 0.4s;
-}
-.timelineItem:nth-child(4) {
-  animation-delay: 0.55s;
-}
-.timelineItem:nth-child(5) {
-  animation-delay: 0.7s;
-}
-
-/* NÚMERO CÍRCULO */
 .number {
+  background: var(--c-gold);
+  color: var(--c-brown);
   width: 38px;
   height: 38px;
-  background: #f1c98d; /* beige premium */
-  color: #6a502a;
-  font-weight: 700;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 17px;
-  flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-}
-
-/* TEXTO DEL ITEM */
-.itemText {
-  color: #6a502a;
-  font-size: 17px;
-  line-height: 1.5;
-  font-weight: 500;
-  background: #f9f8f7;
-  padding: 10px 14px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* =============================== */
-/*   ANIMACIÓN                     */
-/* =============================== */
-
-@keyframes fadeSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =============================== */
-/*   RESPONSIVE                    */
-/* =============================== */
-
-@media (max-width: 900px) {
-  .wrapper {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .right {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 28px;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  .itemText {
-    font-size: 15px;
-  }
+  font-weight: 700;
 }

@@ -1,236 +1,125 @@
-/* ===========================
-   FOOTER GENERAL
-=========================== */
 .footer {
-  background-color: #e3d5ca; /* color principal */
-  color: #6a502a; /* texto café oscuro */
-  padding: 55px 60px;
-  font-family: "Lexend", sans-serif;
+  background: var(--c-primary);
+  color: var(--c-brown);
+  padding: 48px 20px;
   position: relative;
-  overflow: visible;
-  border-top: 3px solid #cf79e7; /* acento moderno */
+  border-top: 3px solid var(--c-purple);
+  box-sizing: border-box;
 }
 
-/* ===========================
-   SECCIÓN SUPERIOR (5 BLOQUES)
-=========================== */
 .topSection {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 25px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
 }
 
 .logoSection,
 .contactSection,
-.rightsSection,
 .followSection,
 .instagramFeed {
-  flex: 1 1 0;
-  min-width: 180px;
+  flex: 1 1 220px;
+  min-width: 200px;
 }
 
-/* ===========================
-   LOGO Y DESCRIPCIÓN
-=========================== */
-.logoSection {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.subtitle {
-  font-size: 14px;
-  color: #6a502a;
-  opacity: 0.75;
-}
-
-/* ===========================
-   TÍTULOS
-=========================== */
 .title {
   font-weight: 700;
-  border-bottom: 2px solid #cf79e7;
-  padding-bottom: 6px;
-  margin-bottom: 14px;
-  font-size: 17px;
-  color: #6a502a;
+  color: var(--c-brown);
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--c-purple);
+  padding-bottom: 8px;
 }
 
-/* ===========================
-   LISTAS
-=========================== */
-.contactList,
-.rightsList {
-  list-style: none;
-  padding-left: 0;
+.contactList li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--c-brown);
+  margin-bottom: 8px;
   font-size: 14px;
 }
 
-.contactList li,
-.rightsList li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #6a502a;
-}
-
-/* LINKS */
 .link {
-  color: #6a502a;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
+  color: var(--c-brown);
+  transition: color 0.18s;
 }
-
 .link:hover {
-  color: #cf79e7;
+  color: var(--c-purple);
   text-decoration: underline;
 }
 
-/* ===========================
-   ICONOS SOCIALES
-=========================== */
-.socialIcons {
-  display: flex;
-  gap: 18px;
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
 .socialIcons a {
-  color: #6a502a;
-  transition: color 0.3s ease, transform 0.3s ease;
+  color: var(--c-brown);
+  font-size: 18px;
+  transition: transform 0.15s, color 0.15s;
 }
-
 .socialIcons a:hover {
-  color: #cf79e7;
-  transform: scale(1.08);
+  color: var(--c-purple);
+  transform: scale(1.06);
 }
 
-/* ===========================
-   INSTAGRAM FEED
-=========================== */
 .instagramFeed blockquote.instagram-media {
-  background: #f9f8f7;
+  background: var(--c-cream);
   border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #f1c98d;
-  padding: 0 !important;
+  border: 1px solid var(--c-gold);
+  padding: 0;
   margin: 0 auto;
+  max-width: 360px;
 }
 
-.instagramFeed iframe {
-  border-radius: 10px !important;
-}
-
-/* ===========================
-   SECCIÓN INFERIOR
-=========================== */
 .bottomSection {
   text-align: center;
   font-size: 13px;
-  font-weight: 500;
-  color: #6a502a;
-  opacity: 0.75;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 20px;
-  border-top: 1px solid rgba(106, 80, 42, 0.3);
+  opacity: 0.8;
+  margin-top: 12px;
+  color: var(--c-brown);
 }
 
-/* ===========================
-   BOTONES FLOTANTES
-=========================== */
 .fixedButtons {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1400;
   display: flex;
-  flex-direction: column;
   gap: 10px;
-  z-index: 1000;
 }
 
 .phoneBtn {
-  background-color: #ffffff;
-  border: 1.5px solid #25d366;
+  background: var(--c-cream);
   color: #25d366;
-  padding: 12px;
   border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
+  padding: 10px;
+  border: 1.5px solid #25d366;
   width: 48px;
   height: 48px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+  justify-content: center;
 }
-
 .phoneBtn:hover {
-  background-color: #25d366;
-  color: #ffffff;
-  border-color: #f4c300;
+  background: #25d366;
+  color: var(--c-cream);
+  border-color: var(--c-gold);
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
 @media (max-width: 992px) {
-  .footer {
-    padding: 45px 30px;
-  }
-
   .topSection {
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 28px;
   }
-
   .logoSection,
   .contactSection,
-  .rightsSection,
   .followSection,
   .instagramFeed {
-    width: 100%;
-    max-width: 420px;
     text-align: center;
     align-items: center;
   }
-}
-
-@media (max-width: 768px) {
-  .fixedButtons {
-    bottom: 20px;
-    right: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 30px 20px;
-  }
-
-  .title {
-    font-size: 15px;
-  }
-
-  .contactList li,
-  .rightsList li {
-    font-size: 13px;
-  }
-
-  .phoneBtn {
-    width: 42px;
-    height: 42px;
-    font-size: 16px;
+  .instagramFeed blockquote.instagram-media {
+    max-width: 92%;
   }
 }
