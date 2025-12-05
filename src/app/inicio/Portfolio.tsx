@@ -28,7 +28,7 @@ export default function Portfolio() {
           con nuestro equipo haciendo clic en el botón a continuación.
         </p>
 
-        <Link href={"/areas-juridicas"}>
+        <Link href={"/areas-practica"}>
           <button className={styles.ctaButton}>ÁREAS DE PRÁCTICA</button>
         </Link>
       </div>

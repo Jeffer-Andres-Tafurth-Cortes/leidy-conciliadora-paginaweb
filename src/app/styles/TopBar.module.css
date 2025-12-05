@@ -30,6 +30,7 @@
 .socialIcon {
   color: var(--c-cream);
   transition: transform 0.15s ease, color 0.15s ease;
+  font-size: 18px;
 }
 .socialIcon:hover {
   color: var(--c-gold);

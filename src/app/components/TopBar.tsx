@@ -4,12 +4,7 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebookF,
-  faLinkedinIn,
-  faInstagram,
-  faTiktok,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import styles from "../styles/TopBar.module.css";
 
 const TopBar = () => {
@@ -17,10 +12,6 @@ const TopBar = () => {
     <div className={styles.topBar}>
       {/* Información izquierda */}
       <div className={styles.leftSection}>
-        <span className={styles.infoItem}>
-          <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />
-          Calle 98 # 22-64 OF 716 Bogotá D.C.
-        </span>
         <span className={styles.infoItem}>
           <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
           <a
@@ -39,31 +30,7 @@ const TopBar = () => {
       {/* Redes sociales y iconos derecha */}
       <div className={styles.rightSection}>
         <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="TikTok"
-        >
-          <FontAwesomeIcon icon={faTiktok} className={styles.socialIcon} />
-        </a>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
-          <FontAwesomeIcon icon={faFacebookF} className={styles.socialIcon} />
-        </a>
-        <a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <FontAwesomeIcon icon={faLinkedinIn} className={styles.socialIcon} />
-        </a>
-        <a
-          href=""
+          href="/https://www.instagram.com/leidytuconciliadora/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"

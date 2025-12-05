@@ -84,36 +84,12 @@ const Footer: FC = () => {
           <h3 className={styles.title}>SÍGUENOS</h3>
           <div className={styles.socialIcons}>
             <a
-              href="https://www.facebook.com/praviceabogadosespecializados"
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a
-              href="https://co.linkedin.com/company/praviceabogadosespecializados"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-            <a
               href="https://www.instagram.com/leidytuconciliadora/"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              href="https://www.tiktok.com/@pravice_abogados"
-              aria-label="TikTok"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faTiktok} />
             </a>
           </div>
         </div>

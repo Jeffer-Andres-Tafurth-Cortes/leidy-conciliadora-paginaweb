@@ -13,14 +13,11 @@ const handleClick = () => {
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      {/* Video de fondo */}
-      <video className={styles.videoBg} autoPlay muted loop playsInline>
-        <source src="/video-intro.mov" type="video/mp4" />
-      </video>
+      {/* Cuadro de texto: izquierda */}
       <motion.div
         className={styles.content}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h1 className={styles.mainTitle}>
@@ -41,6 +38,18 @@ export default function Hero() {
         <button className={styles.ctaButton} onClick={handleClick}>
           PROGRAME UNA CONSULTA
         </button>
+      </motion.div>
+
+      {/* Video: derecha */}
+      <motion.div
+        className={styles.videoBg}
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+      >
+        <video autoPlay muted loop playsInline>
+          <source src="/video-intro.mov" type="video/mp4" />
+        </video>
       </motion.div>
     </section>
   );
