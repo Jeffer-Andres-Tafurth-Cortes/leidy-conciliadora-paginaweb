@@ -48,7 +48,7 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
       >
         <video autoPlay muted loop playsInline>
-          <source src="/video-intro.mov" type="video/mp4" />
+          <source src="/video-intro-leidy.mp4" type="video/mp4" />
         </video>
       </motion.div>
     </section>
