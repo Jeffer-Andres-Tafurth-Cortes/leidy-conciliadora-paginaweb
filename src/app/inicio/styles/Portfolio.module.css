@@ -6,7 +6,7 @@
   border-radius: 12px;
   display: flex;
   gap: 28px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   color: var(--c-brown);
 }
 .left {
