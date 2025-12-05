@@ -1,0 +1,235 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+  padding: 180px 20px 0 20px; /* Agregado padding-top para navbar sticky */
+  text-align: center;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #f1c98d; /* dorado claro */
+}
+
+.subtitle {
+  color: #f1c98d; /* dorado claro */
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #6a502a; /* marrón principal */
+}
+
+/* GRID PRINCIPAL */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* TARJETA 3D */
+.cardWrapper {
+  width: 320px;
+  height: 350px;
+  perspective: 1200px;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.75s ease;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(106, 80, 42, 0.1);
+}
+
+/* Botón CTA */
+.ctaButton {
+  background: linear-gradient(90deg, #f1c98d 0%, #cf79e7 100%);
+  border: none;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(106, 80, 42, 0.12);
+}
+
+.ctaButton:hover {
+  background-color: #6a502a;
+  color: #f9f8f7;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(106, 80, 42, 0.22);
+}
+
+/* Rotación en hover (solo desktop) */
+@media (min-width: 769px) {
+  .cardWrapper:hover .card {
+    transform: rotateY(180deg);
+  }
+}
+
+/* CARAS */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px 24px;
+  border: 1.5px solid #f1c98d;
+  border-radius: 6px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #e3d5ca;
+  color: #6a502a;
+}
+
+.front {
+  justify-content: flex-start;
+}
+
+.icon {
+  font-size: 30px;
+  color: #cf79e7;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #6a502a;
+}
+
+.frontText,
+.bulletList {
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  color: #6a502a;
+  opacity: 0.9;
+}
+
+/* Parte trasera */
+.back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1.6;
+  padding-top: 30px;
+  text-align: left;
+  color: #6a502a;
+  overflow-y: auto;
+}
+
+/* Lista dentro de la tarjeta */
+.bulletList {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #6a502a;
+  text-align: left;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+/* Tablets medianas */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .cardWrapper {
+    width: 300px;
+    height: 330px;
+  }
+}
+
+/* Tablets pequeñas / móviles grandes */
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .cardWrapper {
+    width: 85%;
+    max-width: 320px;
+    height: auto;
+    max-height: 350px;
+    margin-bottom: 25px;
+  }
+
+  .frontText,
+  .bulletList {
+    font-size: 13px;
+    -webkit-line-clamp: 6;
+  }
+
+  .front,
+  .back {
+    padding: 20px 16px;
+  }
+
+  /* Para móviles se activa flip al tocar */
+  .cardWrapper:active .card {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .cardWrapper {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .frontText,
+  .bulletList {
+    font-size: 12px;
+    -webkit-line-clamp: 5;
+  }
+
+  .front,
+  .back {
+    padding: 16px 12px;
+  }
+}

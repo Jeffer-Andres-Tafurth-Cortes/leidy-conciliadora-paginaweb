@@ -1,0 +1,112 @@
+/* ============================
+   WRAPPER GENERAL
+================================ */
+.wrapper {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  padding: 50px 20px;
+  background: #f9f8f7;
+}
+
+/* ============================
+   COLUMNA IZQUIERDA
+================================ */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Marco con borde suave */
+.photoFrame {
+  background: #e3d5ca;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.photoFrame img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Caja "Contáctenos" */
+.contactBox {
+  background: #ffffff;
+  border: 2px solid #e3d5ca;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.contactBox h3 {
+  font-size: 1.6rem;
+  color: #6a502a;
+  margin-bottom: 10px;
+}
+
+.contactBox p {
+  margin-bottom: 20px;
+  color: #4a3e2c;
+}
+
+/* Botón */
+.contactButton {
+  display: block;
+  background: #cf79e7;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contactButton:hover {
+  background: #b868cd;
+}
+
+/* ============================
+   COLUMNA DERECHA
+================================ */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Títulos de secciones */
+.sectionTitle {
+  font-size: 1.4rem;
+  color: #6a502a;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* Párrafos */
+.bioText {
+  color: #3a2f22;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Lista */
+.list li {
+  margin-bottom: 8px;
+  color: #3a2f22;
+}
+
+/* ============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .leftColumn {
+    align-items: center;
+  }
+}
