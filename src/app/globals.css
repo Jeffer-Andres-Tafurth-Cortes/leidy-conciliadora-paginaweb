@@ -10,20 +10,21 @@
   --radius: 12px;
 }
 
-html,
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: var(--c-primary);
-  color: var(--c-brown);
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
 }
 
-*,
+html {
+  scroll-behavior: smooth;
+}
+
 *::before,
 *::after {
-  box-sizing: inherit;
+  content: none !important;
 }
 
 a {

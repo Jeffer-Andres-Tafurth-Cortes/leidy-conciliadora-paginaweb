@@ -13,7 +13,6 @@ const handleClick = () => {
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      {/* Cuadro de texto: izquierda */}
       <motion.div
         className={styles.content}
         initial={{ opacity: 0, x: -20 }}
@@ -26,7 +25,6 @@ export default function Hero() {
         </h1>
 
         <p className={styles.paragraph}>Sabemos ...</p>
-
         <p className={styles.paragraph}>Por eso ...</p>
 
         <p className={styles.finalPhrase}>
@@ -40,7 +38,6 @@ export default function Hero() {
         </button>
       </motion.div>
 
-      {/* Video: derecha */}
       <motion.div
         className={styles.videoBg}
         initial={{ opacity: 0, x: 20 }}

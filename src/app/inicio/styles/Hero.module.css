@@ -1,30 +1,28 @@
 .hero {
   position: relative;
-  min-height: auto;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
   padding: calc(var(--navbar-height) + 32px) 20px 48px;
-  text-align: left;
   background: var(--c-primary);
   box-sizing: border-box;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
-/* Video a la derecha: contenedor */
+/* VIDEO */
 .videoBg {
   position: relative;
-  width: 40%;
-  height: auto;
-  min-height: 420px; /* reducido de 500px */
-  max-width: 400px; /* reducido de 480px */
+  flex: 1 1 300px;
+  max-width: 400px;
+  min-height: 420px;
   border-radius: 14px;
   overflow: hidden;
+  background: var(--c-primary);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
   z-index: 1;
-  background: var(--c-primary);
 }
 
 .videoBg video {
@@ -34,12 +32,11 @@
   display: block;
 }
 
-/* Contenedor de texto: a la izquierda */
+/* TEXTO */
 .content {
   position: relative;
   z-index: 2;
-  width: 50%;
-  min-width: 320px;
+  flex: 1 1 380px; /* <-- FIX version final */
   max-width: 620px;
   padding: 40px 28px;
   border-radius: 14px;
@@ -92,19 +89,16 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-/* TABLET: reduce video, ajusta contenido */
+/* TABLET */
 @media (max-width: 992px) {
   .hero {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 24px;
   }
 
   .videoBg {
     width: 100%;
     max-width: 520px;
-    min-height: 420px;
   }
 
   .content {
@@ -112,13 +106,9 @@
     max-width: 680px;
     padding: 32px 24px;
   }
-
-  .mainTitle {
-    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  }
 }
 
-/* MÓVIL MEDIANO */
+/* MOVIL MED */
 @media (max-width: 768px) {
   .hero {
     padding: calc(var(--navbar-height) + 20px) 12px 32px;
@@ -129,23 +119,19 @@
     width: 100%;
     max-width: 100%;
     min-height: 360px;
-    border-radius: 12px;
   }
 
   .content {
     width: 100%;
     padding: 24px 16px;
-    border-radius: 12px;
   }
 
   .ctaButton {
     width: 100%;
-    padding: 12px 0;
-    display: block;
   }
 }
 
-/* MÓVIL PEQUEÑO */
+/* MOVIL PEQUEÑO */
 @media (max-width: 480px) {
   .hero {
     padding: calc(var(--navbar-height) + 12px) 10px 24px;
@@ -154,12 +140,10 @@
 
   .videoBg {
     min-height: 300px;
-    border-radius: 10px;
   }
 
   .content {
     padding: 18px 12px;
-    border-radius: 10px;
   }
 
   .mainTitle {
