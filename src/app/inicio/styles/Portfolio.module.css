@@ -8,6 +8,7 @@
   gap: 28px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   color: var(--c-brown);
+  border: 1px solid var(--c-gold);
 }
 .left {
   flex: 1;

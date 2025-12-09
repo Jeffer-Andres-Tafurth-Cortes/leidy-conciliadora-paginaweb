@@ -27,6 +27,7 @@
   padding: 10px;
   border-radius: 12px;
   width: 100%;
+  border: 1px solid var(--c-gold);
 }
 .photoFrame img {
   width: 100%;
@@ -36,7 +37,7 @@
 
 .contactBox {
   background: #fff;
-  border: 2px solid var(--c-primary);
+  border: 1px solid var(--c-gold);
   padding: 18px;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);

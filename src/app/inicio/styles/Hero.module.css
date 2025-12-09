@@ -32,6 +32,8 @@
   background: var(--c-primary);
 
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+
+  border: 2px solid var(--c-gold);
 }
 
 .videoBg video {
@@ -52,7 +54,7 @@
   border-radius: 14px;
 
   background: rgba(249, 248, 247, 0.88);
-  border: 1px solid rgba(106, 80, 42, 0.12);
+  border: 2px solid var(--c-gold);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 
   z-index: 2;

@@ -2,7 +2,6 @@
   width: 100%;
   background: var(--c-primary);
   padding: 60px 16px;
-  border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +20,7 @@
   padding: 18px;
   border-radius: 14px;
   color: var(--c-brown);
-  border: 2px solid var(--c-gold);
+  border: 1px solid var(--c-gold);
   text-align: center;
   width: 100%;
   max-width: 240px;
@@ -65,7 +64,7 @@
   background: var(--c-cream);
   padding: 32px;
   border-radius: 14px;
-  border: 2px solid var(--c-gold);
+  border: 1px solid var(--c-gold);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   width: 52%;
   color: var(--c-brown);
@@ -89,7 +88,6 @@
   max-height: 420px; /* limita altura en desktop */
   object-fit: contain; /* cubre contenedor sin deformar, recortando cuando sea necesario */
   display: block;
-  border-radius: 18px;
 }
 .title {
   font-size: 28px;
