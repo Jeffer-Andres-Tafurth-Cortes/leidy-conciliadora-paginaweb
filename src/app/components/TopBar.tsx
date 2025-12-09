@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMapMarkerAlt,
-  faEnvelope,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import styles from "../styles/TopBar.module.css";
 
@@ -23,7 +19,7 @@ const TopBar = () => {
         </span>
         <span className={styles.infoItem}>
           <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-          (601)3827477
+          +57 321 3525962
         </span>
       </div>
 

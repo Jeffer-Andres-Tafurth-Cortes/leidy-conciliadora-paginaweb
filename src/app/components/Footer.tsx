@@ -68,7 +68,7 @@ const Footer: FC = () => {
               <span aria-label="Teléfono" role="img">
                 <FontAwesomeIcon icon={faPhone} />
               </span>
-              (311) 465 93 15
+              +57 321 3525962
             </li>
           </ul>
         </div>
