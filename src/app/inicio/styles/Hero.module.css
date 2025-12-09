@@ -53,7 +53,7 @@
 
   background: rgba(249, 248, 247, 0.88);
   border: 1px solid rgba(106, 80, 42, 0.12);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 
   z-index: 2;
 }
