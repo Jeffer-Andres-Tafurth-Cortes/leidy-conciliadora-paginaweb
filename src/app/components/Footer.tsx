@@ -7,13 +7,7 @@ import {
   faMailForward,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebookF,
-  faLinkedinIn,
-  faInstagram,
-  faTiktok,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import styles from "../styles/Footer.module.css";
 
@@ -67,7 +61,7 @@ const Footer: FC = () => {
                 href="mailto:info.pravice@abogadosespecialistas.com.co"
                 className={styles.link}
               >
-                info.pravice@abogadosespecialistas.com.co
+                correo Doc. Leidy
               </a>
             </li>
             <li>
@@ -119,7 +113,7 @@ const Footer: FC = () => {
       <hr className={styles.divider} />
 
       <div className={styles.bottomSection}>
-        © {new Date().getFullYear()} Pravice Abogados
+        © {new Date().getFullYear()} Abogada Leidy Tirado
       </div>
 
       {/* Botón fijo de WhatsApp */}

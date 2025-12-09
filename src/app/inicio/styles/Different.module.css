@@ -4,8 +4,7 @@
   padding: 28px;
   background: var(--c-primary);
   border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  border: 2px solid var(--c-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   text-align: center;
   display: flex;
   flex-direction: column;

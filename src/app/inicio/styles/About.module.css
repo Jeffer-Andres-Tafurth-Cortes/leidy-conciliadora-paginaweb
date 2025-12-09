@@ -89,7 +89,7 @@
   max-height: 420px; /* limita altura en desktop */
   object-fit: contain; /* cubre contenedor sin deformar, recortando cuando sea necesario */
   display: block;
-  border-radius: 12px;
+  border-radius: 18px;
 }
 .title {
   font-size: 28px;
