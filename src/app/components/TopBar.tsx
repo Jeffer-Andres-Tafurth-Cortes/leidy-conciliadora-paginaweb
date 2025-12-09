@@ -18,7 +18,7 @@ const TopBar = () => {
             href="mailto:info.pravice@abogadosespecialistas.com.co"
             className={styles.emailLink}
           >
-            info.pravice@abogadosespecialistas.com.co
+            correo doc. Leidy
           </a>
         </span>
         <span className={styles.infoItem}>

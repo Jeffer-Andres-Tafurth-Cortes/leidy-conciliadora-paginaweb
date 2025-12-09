@@ -28,7 +28,12 @@ export default function NavBar() {
       <nav className={styles.container}>
         {/* LOGO */}
         <Link href="/" className={`${styles.logo} ${styles.dark}`}>
-          <Image src="/" alt="Logo Doc. Leidy" width={75} height={70} />
+          <Image
+            src="/logoleidy.jpg"
+            alt="logo leidy1"
+            width={85}
+            height={85}
+          />
         </Link>
 
         {/* MENÚ DESKTOP / MOBILE */}

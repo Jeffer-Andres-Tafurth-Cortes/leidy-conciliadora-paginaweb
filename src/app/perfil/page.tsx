@@ -24,22 +24,22 @@ export default function Perfil() {
       {/* COLUMNA DERECHA */}
       <div className={styles.rightColumn}>
         <p className={styles.bioText}>
-          La Abogada Sierra obtuvo su B.A. (Diploma Universitario) con énfasis
-          en Ciencias Políticas y Estudios Latino-Americanos...
+          La Abogada Leidy obtuvo su B.A. (Diploma Universitario) con énfasis en
+          Ciencias Políticas y Estudios Latino-Americanos...
         </p>
 
         <h3 className={styles.sectionTitle}>Licencias:</h3>
         <p className={styles.bioText}>
-          La Abogada Sierra está certificada por la Corte Suprema...
+          La Abogada Leidy está certificada por la Corte Suprema...
         </p>
 
         <h3 className={styles.sectionTitle}>Experiencia:</h3>
         <p className={styles.bioText}>
-          En la actualidad, la Abogada Sierra se especializa en casos...
+          En la actualidad, la Abogada Leidy se especializa en casos...
         </p>
 
         <h3 className={styles.sectionTitle}>Idiomas:</h3>
-        <p className={styles.bioText}>Español, Inglés e Italiano.</p>
+        <p className={styles.bioText}>Español e Inglés</p>
 
         <h3 className={styles.sectionTitle}>Asociaciones Profesionales:</h3>
         <ul className={styles.list}>

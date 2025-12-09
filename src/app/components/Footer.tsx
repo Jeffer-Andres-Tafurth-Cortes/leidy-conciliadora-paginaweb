@@ -33,11 +33,11 @@ const Footer: FC = () => {
         {/* Logo */}
         <div className={styles.logoSection}>
           <Image
-            src="/"
+            src="/logo-leidy1.jpg"
             alt="Dra. Leidy Tirado"
             className={styles.logo}
             width={100}
-            height={80}
+            height={100}
             priority={true}
           />
           <p className={styles.subtitle}>LEIDY TIRADO</p>
