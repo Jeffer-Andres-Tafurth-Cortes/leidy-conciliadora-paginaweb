@@ -3,6 +3,7 @@
 import { faBuilding, faUsers } from "@fortawesome/free-solid-svg-icons";
 import styles from "./AreasPracticas.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 const handleClick = () => {
   window.open("", "_blank");
@@ -38,11 +39,36 @@ const areas = [
 export default function AreasPracticas() {
   return (
     <section className={styles.container}>
-      <p className={styles.subtitle}>SOMOS ESPECIALISTAS EN</p>
-      <h2 className={styles.title}>ÁREAS DE PRÁCTICA</h2>
+      <motion.p
+        className={styles.subtitle}
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+      >
+        SOMOS ESPECIALISTAS EN
+      </motion.p>
+
+      <motion.h2
+        className={styles.title}
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
+        ÁREAS DE PRÁCTICA
+      </motion.h2>
+
       <div className={styles.grid}>
-        {areas.map(({ title, frontIcon, frontText, backList }) => (
-          <div key={title} className={styles.cardWrapper}>
+        {areas.map(({ title, frontIcon, frontText, backList }, index) => (
+          <motion.div
+            key={title}
+            className={styles.cardWrapper}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.45, delay: index * 0.15 }}
+            viewport={{ once: true }}
+          >
             <div className={styles.card}>
               {/* Frente */}
               <div className={styles.front}>
@@ -59,12 +85,20 @@ export default function AreasPracticas() {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-      <button className={styles.ctaButton} onClick={handleClick}>
+
+      <motion.button
+        className={styles.ctaButton}
+        onClick={handleClick}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
         PROGRAME UNA CONSULTA
-      </button>
+      </motion.button>
     </section>
   );
 }
