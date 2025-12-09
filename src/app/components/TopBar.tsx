@@ -30,7 +30,7 @@ const TopBar = () => {
       {/* Redes sociales y iconos derecha */}
       <div className={styles.rightSection}>
         <a
-          href="/https://www.instagram.com/leidytuconciliadora/"
+          href="https://www.instagram.com/leidytuconciliadora/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
