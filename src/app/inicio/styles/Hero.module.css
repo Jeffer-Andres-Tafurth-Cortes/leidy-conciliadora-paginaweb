@@ -1,28 +1,37 @@
 .hero {
   position: relative;
   width: 100%;
+  max-width: 100vw; /* <-- evita que se pase del ancho */
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+
+  gap: 32px;
   padding: calc(var(--navbar-height) + 32px) 20px 48px;
+
   background: var(--c-primary);
-  box-sizing: border-box;
+
   flex-wrap: wrap;
-  overflow-x: hidden;
+
+  overflow-x: hidden; /* <-- evita scroll lateral */
 }
 
-/* VIDEO */
+/* ===== VIDEO ===== */
 .videoBg {
   position: relative;
-  flex: 1 1 300px;
-  max-width: 400px;
+  flex: 1 1 380px;
+
+  max-width: 460px;
+  width: 100%;
   min-height: 420px;
+
   border-radius: 14px;
   overflow: hidden;
   background: var(--c-primary);
+
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
-  z-index: 1;
 }
 
 .videoBg video {
@@ -32,54 +41,62 @@
   display: block;
 }
 
-/* TEXTO */
+/* ===== CONTENIDO ===== */
 .content {
-  position: relative;
-  z-index: 2;
-  flex: 1 1 380px; /* <-- FIX version final */
+  flex: 1 1 420px;
   max-width: 620px;
+  width: 100%;
+  text-align: center;
+
   padding: 40px 28px;
   border-radius: 14px;
+
   background: rgba(249, 248, 247, 0.88);
   border: 1px solid rgba(106, 80, 42, 0.12);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  text-align: center;
+
+  z-index: 2;
 }
 
+/* ===== TIPOGRAFÍA ===== */
 .mainTitle {
   color: var(--c-brown);
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  line-height: 1.15;
-  margin: 0 0 18px 0;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
   font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 18px;
 }
 
 .paragraph {
   color: var(--c-brown);
   opacity: 0.92;
-  margin-bottom: 14px;
-  line-height: 1.6;
   font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 14px;
 }
 
 .finalPhrase {
   color: var(--c-black);
   font-weight: 600;
-  margin: 18px 0;
   line-height: 1.5;
+  margin: 18px 0;
 }
 
+/* ===== BOTÓN ===== */
 .ctaButton {
   display: inline-block;
   background: linear-gradient(90deg, var(--c-purple), var(--c-gold));
   color: var(--c-black);
+
   padding: 12px 28px;
   border-radius: 999px;
-  font-weight: 700;
   border: 2px solid rgba(0, 0, 0, 0.06);
+
+  margin-top: 8px;
+  font-weight: 700;
+
   cursor: pointer;
   transition: all 0.28s ease;
-  margin-top: 8px;
 }
 
 .ctaButton:hover {
@@ -89,41 +106,42 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-/* TABLET */
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
 @media (max-width: 992px) {
   .hero {
     flex-direction: column;
     gap: 24px;
+    padding: calc(var(--navbar-height) + 24px) 16px 40px;
+    text-align: center;
   }
 
   .videoBg {
-    width: 100%;
     max-width: 520px;
+    width: 100%;
   }
 
   .content {
-    width: 100%;
     max-width: 680px;
+    width: 100%;
     padding: 32px 24px;
   }
 }
 
-/* MOVIL MED */
+/* Movil */
 @media (max-width: 768px) {
   .hero {
     padding: calc(var(--navbar-height) + 20px) 12px 32px;
-    gap: 16px;
+    gap: 20px;
   }
 
   .videoBg {
-    width: 100%;
-    max-width: 100%;
     min-height: 360px;
   }
 
   .content {
-    width: 100%;
-    padding: 24px 16px;
+    padding: 24px 18px;
   }
 
   .ctaButton {
@@ -131,11 +149,11 @@
   }
 }
 
-/* MOVIL PEQUEÑO */
+/* Movil pequeño */
 @media (max-width: 480px) {
   .hero {
     padding: calc(var(--navbar-height) + 12px) 10px 24px;
-    gap: 12px;
+    gap: 16px;
   }
 
   .videoBg {
@@ -147,7 +165,7 @@
   }
 
   .mainTitle {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(1.3rem, 4vw, 1.9rem);
   }
 
   .paragraph {

@@ -15,9 +15,9 @@ export default function Hero() {
     <section className={styles.hero}>
       <motion.div
         className={styles.content}
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
       >
         <h1 className={styles.mainTitle}>
           LEIDY TIRADO
@@ -40,9 +40,9 @@ export default function Hero() {
 
       <motion.div
         className={styles.videoBg}
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
       >
         <video autoPlay muted loop playsInline>
           <source src="/video-intro-leidy.mp4" type="video/mp4" />
