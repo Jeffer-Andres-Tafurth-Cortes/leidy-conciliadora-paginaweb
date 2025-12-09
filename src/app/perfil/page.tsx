@@ -37,7 +37,7 @@ export default function Perfil() {
           <p>¿Preguntas? Será un placer ayudarle.</p>
 
           <motion.a
-            href="mailto:contacto@correo.com"
+            href="mailto:"
             className={styles.contactButton}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
