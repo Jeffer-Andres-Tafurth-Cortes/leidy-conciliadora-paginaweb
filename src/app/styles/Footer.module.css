@@ -1,3 +1,6 @@
+/* ================================
+   FOOTER
+================================ */
 .footer {
   background: var(--c-primary);
   color: var(--c-brown);
@@ -5,35 +8,65 @@
   position: relative;
   border-top: 3px solid var(--c-purple);
   box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden; /* FIX PRINCIPAL */
 }
 
+/* ================================
+   TOP SECTION
+================================ */
 .topSection {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 32px;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start; /* NO lo empuja al centro */
   flex-wrap: wrap;
   padding-bottom: 16px;
+  width: 100%;
 }
 
+/* ================================
+   CADA COLUMNA
+================================ */
 .logoSection,
 .contactSection,
 .followSection,
 .instagramFeed {
-  flex: 1 1 220px;
-  min-width: 200px;
+  flex: 1 1 240px;
+  min-width: 240px; /* evita romper layout */
 }
 
+/* ================================
+   LOGO
+================================ */
+.logo {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.subtitle {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* ================================
+   TITLES
+================================ */
 .title {
   font-weight: 700;
   color: var(--c-brown);
   margin-bottom: 8px;
   border-bottom: 2px solid var(--c-purple);
   padding-bottom: 8px;
+  width: 100%;
 }
 
+/* ================================
+   TEXT + LISTS
+================================ */
 .contactList li {
   display: flex;
   gap: 8px;
@@ -41,6 +74,8 @@
   color: var(--c-brown);
   margin-bottom: 8px;
   font-size: 14px;
+  text-align: left;
+  word-break: break-word;
 }
 
 .link {
@@ -54,7 +89,7 @@
 
 .socialIcons a {
   color: var(--c-brown);
-  font-size: 18px;
+  font-size: 20px;
   transition: transform 0.15s, color 0.15s;
 }
 .socialIcons a:hover {
@@ -62,15 +97,41 @@
   transform: scale(1.06);
 }
 
-.instagramFeed blockquote.instagram-media {
-  background: var(--c-cream);
-  border-radius: 10px;
-  border: 1px solid var(--c-gold);
-  padding: 0;
-  margin: 0 auto;
-  max-width: 360px;
+/* ================================
+   INSTAGRAM FEED
+================================ */
+.instagramFeed {
+  overflow: hidden; /* evita empujar el layout */
+  max-width: 100%;
 }
 
+.instagramFeed blockquote.instagram-media {
+  background: var(--c-cream) !important;
+  border-radius: 10px;
+  border: 1px solid var(--c-gold) !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+/* ================================
+   HR DIVIDER
+================================ */
+.divider {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background: var(--c-brown);
+  opacity: 0.3;
+  margin: 20px 0;
+}
+
+/* ================================
+   BOTTOM SECTION
+================================ */
 .bottomSection {
   text-align: center;
   font-size: 13px;
@@ -79,6 +140,9 @@
   color: var(--c-brown);
 }
 
+/* ================================
+   BOTONES FIJOS
+================================ */
 .fixedButtons {
   position: fixed;
   bottom: 24px;
@@ -101,26 +165,34 @@
   justify-content: center;
   cursor: pointer;
   font-size: 20px;
+  transition: 0.2s ease;
 }
 .phoneBtn:hover {
   background: #25d366;
   color: var(--c-cream);
 }
 
+/* ================================
+   RESPONSIVE
+================================ */
 @media (max-width: 992px) {
   .topSection {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 28px;
   }
   .logoSection,
   .contactSection,
   .followSection,
   .instagramFeed {
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    width: 100%;
   }
-  .instagramFeed blockquote.instagram-media {
-    max-width: 92%;
+}
+
+@media (max-width: 600px) {
+  .phoneBtn {
+    width: 52px;
+    height: 52px;
   }
 }

@@ -1,3 +1,6 @@
+/* ----------------------------------------------------
+   NAVBAR BASE
+---------------------------------------------------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -9,7 +12,8 @@
   z-index: 1100;
   background: transparent;
   transition: background 0.22s ease, box-shadow 0.22s ease;
-  padding: 0 16px;
+  padding: 0 12px;
+  overflow-x: hidden; /* EVITA desplazamiento horizontal */
 }
 
 .scrolled {
@@ -17,6 +21,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
+/* Contenedor general */
 .container {
   max-width: 1200px;
   width: 100%;
@@ -24,26 +29,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gap);
-  padding: 0 10px;
+  gap: 12px;
+  padding: 0 6px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+/* Logo */
 .logo img {
   max-height: 30px;
 }
 
-.light {
-  color: var(--c-cream);
-}
-.dark {
-  color: var(--c-brown);
-}
-
+/* Links */
 .links {
   list-style: none;
   display: flex;
@@ -61,12 +56,11 @@
   border-radius: 6px;
 }
 
-.links a:hover,
-.links a:focus {
+.links a:hover {
   color: var(--c-purple);
-  outline: none;
 }
 
+/* Botón CTA */
 .ctaButton {
   background: var(--c-gold);
   color: var(--c-black);
@@ -76,6 +70,7 @@
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(106, 80, 42, 0.12);
+  white-space: nowrap;
 }
 .ctaButton:hover {
   background: var(--c-purple);
@@ -83,6 +78,7 @@
   transform: translateY(-2px);
 }
 
+/* Hamburguesa */
 .hamburger {
   display: none;
 }
@@ -94,24 +90,44 @@
   display: block;
 }
 
+/* ----------------------------------------------------
+   TABLETS Y CELULARES (OPTIMIZADO)
+---------------------------------------------------- */
 @media (max-width: 850px) {
+  /* Reduce ancho del nav */
+  .navbar {
+    padding: 0 8px;
+    overflow-x: hidden;
+  }
+
+  /* Menú hamburguesa visible */
   .hamburger {
     display: flex;
     gap: 6px;
     align-items: center;
     flex-direction: column;
   }
+
+  /* Ajuste del contenedor */
+  .container {
+    gap: 6px;
+  }
+
+  /* Links en menú lateral */
   .links {
     position: fixed;
     top: var(--navbar-height);
     right: -100%;
-    width: 80%;
+    width: 75%;
+    max-width: 300px;
     height: calc(100vh - var(--navbar-height));
     background: var(--c-cream);
     flex-direction: column;
     padding: 40px 24px;
     transition: right 0.28s ease;
     z-index: 1050;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .links.active {
     right: 0;
@@ -119,16 +135,31 @@
   .links a {
     font-size: 16px;
     font-weight: 700;
-    color: var(--c-brown);
+  }
+
+  /* BOTÓN MÁS COMPACTO */
+  .ctaButton {
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 6px;
   }
 }
 
+/* ----------------------------------------------------
+   CELULARES PEQUEÑOS
+---------------------------------------------------- */
 @media (max-width: 480px) {
   .ctaButton {
-    padding: 10px 14px;
+    padding: 8px 12px;
     font-size: 12px;
   }
+
   .links {
-    width: 85%;
+    width: 80%;
+  }
+
+  .container {
+    gap: 4px;
+    padding: 0 4px;
   }
 }
