@@ -32,7 +32,7 @@ export default function NavBar() {
             src="/logoleidy.jpg"
             alt="logo leidy1"
             width={85}
-            height={80}
+            height={85}
           />
         </Link>
 
