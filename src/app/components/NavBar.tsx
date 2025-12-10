@@ -7,7 +7,10 @@ import styles from "../styles/NavBar.module.css";
 import Image from "next/image";
 
 const handleClick = () => {
-  window.open("", "_blank");
+  window.open(
+    "https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0",
+    "_blank"
+  );
 };
 
 export default function NavBar() {

@@ -20,17 +20,24 @@ export default function Hero() {
         transition={{ duration: 0.7 }}
       >
         <h1 className={styles.mainTitle}>
-          LEIDY TIRADO
-          <br /> TU CONCILIADORA
+          LEIDY
+          <br /> TU CONCILIADORA LEGAL
         </h1>
 
-        <p className={styles.paragraph}>Sabemos ...</p>
-        <p className={styles.paragraph}>Por eso ...</p>
+        <p className={styles.paragraph}>
+          Sabemos que vivir un conflicto legal no solo agota el bolsillo,
+          también cansa el corazón
+        </p>
+        <p className={styles.paragraph}>
+          Por eso, conmigo el proceso es más claro, más humano y mucho menos
+          estresante
+        </p>
 
         <p className={styles.finalPhrase}>
-          No dejes tu caso en manos de cualquiera.
+          Te explico tus opciones, te acompaño paso a paso y buscamos acuerdos
+          que te devuelvan
           <br />
-          <strong>Déjalo en manos de especialistas.</strong>
+          <strong>la tranquilidad.</strong>
         </p>
 
         <button className={styles.ctaButton} onClick={handleClick}>

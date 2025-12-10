@@ -6,7 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
 const handleClick = () => {
-  window.open("", "_blank");
+  window.open(
+    "https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0",
+    "_blank"
+  );
 };
 
 const areas = [

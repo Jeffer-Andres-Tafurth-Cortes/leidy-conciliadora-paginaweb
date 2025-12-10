@@ -3,11 +3,12 @@ import styles from "./styles/Portfolio.module.css";
 
 export default function Portfolio() {
   const items = [
-    "DERECHO ...",
-    "DERECHO ...",
-    "DERECHO ...",
-    "DERECHO ...",
-    "DERECHO ...",
+    "Conciliación familiar.",
+    "Conciliación en separaciones",
+    "Conciliación en arrendamientos y vivienda.",
+    "Conciliación en propiedad horizontal y convivencia entre vecinos.",
+    "Conciliación laboral (individual).",
+    "Conciliación en conflictos comerciales.",
   ];
 
   return (
@@ -19,13 +20,13 @@ export default function Portfolio() {
         <h1 className={styles.title}>NUESTRAS ÁREAS DE PRÁCTICA</h1>
 
         <p className={styles.description}>
-          Leidy ... Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Repellendus quibusdam quidem dolorum ipsam, porro ad earum adipisci
-          similique nulla iusto qui ex quos beatae minus voluptate accusamus
-          consequatur fugit id?
+          La conciliación, es una herramienta concreta para resolver conflictos
+          reales. Por eso trabajo en áreas donde el impacto se siente en la
+          casa, en el bolsillo y en las relaciones: familia, pareja, deudas,
+          vivienda, trabajo y negocios.
           <br /> <br />
-          Si el área de práctica que busca no aparece en el listado, comuníquese
-          con nuestro equipo haciendo clic en el botón a continuación.
+          En estas situaciones, te puedo acompañar para pasar del conflicto al
+          acuerdo, con respaldo legal y con el menor desgaste emocional posible.
         </p>
 
         <Link href={"/areas-practica"}>

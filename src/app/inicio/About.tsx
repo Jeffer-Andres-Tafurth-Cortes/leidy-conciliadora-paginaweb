@@ -6,9 +6,9 @@ const About = () => {
       {/* ------------------ BARRA DE PASOS ------------------ */}
       <div className={styles.stepsBar}>
         {[
-          { num: "1", text: "Programe Una Consulta" },
-          { num: "2", text: "Revise Su Caso" },
-          { num: "3", text: "Cree Un Plan De Acción" },
+          { num: "1", text: "Programas tu consulta." },
+          { num: "2", text: "Reviso y escucho atentamente tu caso." },
+          { num: "3", text: "Creo un plan de acción especial para ti." },
         ].map((step, index) => (
           <div key={index} className={styles.stepItem}>
             <div className={styles.stepNumber}>{step.num}</div>
@@ -21,27 +21,27 @@ const About = () => {
       <div className={styles.container}>
         {/* Texto */}
         <article className={styles.contentBox}>
-          <h2 className={styles.title}>¡Conoce a LEIDY!</h2>
+          <h2 className={styles.title}>¡CONOCE A LEIDY!</h2>
 
           <p className={styles.paragraph}>
-            Detrás de cada caso, negociación y estrategia legal, hay un equipo
-            que ama lo que hace: defender derechos, proteger el patrimonio y
-            devolver tranquilidad a quienes confían en nosotros.
+            Soy Leidy Tirado, conciliadora en derecho y CEO de SOL Centro de
+            Conciliación. Empecé en el ejercicio tradicional de la abogacía,
+            pero pronto comprendí que muchos conflictos podían resolverse de
+            forma más rápida, humana y menos desgastante a través de la
+            conciliación.
           </p>
 
           <p className={styles.paragraph}>
-            Trabajamos con pasión, disciplina y convicción. Cuando no estamos
-            diseñando estrategias legales, estamos creando nuevos proyectos,
-            formándonos constantemente y fortaleciendo una firma que cree en la
-            justicia, el orden y las segundas oportunidades.
+            Hoy acompaño a personas, familias y empresas a transformar
+            conflictos en acuerdos claros, legales y sostenibles.
           </p>
 
           <p className={styles.paragraph}>
-            Más que abogados, somos aliados legales comprometidos con tu
-            tranquilidad.
+            Mi propósito es que no tengas que elegir entre tus derechos y tu
+            paz.
           </p>
 
-          <button className={styles.ctaButton}>PROGRAME UNA CONSULTA</button>
+          <button className={styles.ctaButton}>LEER MAS SOBRE MI</button>
         </article>
 
         {/* Imagen */}

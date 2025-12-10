@@ -20,41 +20,41 @@ const YouLookingAt: FC = () => {
       <div className={styles.grid}>
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Está buscando ...?
+          ¿Qué tipo de problemas legales se pueden conciliar?
         </div>
 
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Tiene dinero por cobrar ...?
+          ¿Pierdo mis derechos si acepto conciliar o llegar a un acuerdo?
         </div>
 
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Debe enfrentarse a un cliente ...?
+          ¿Qué tanta fuerza tiene lo que firmamos en conciliación?
         </div>
 
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Tiene un conflicto que le está quitando tiempo ...?
+          ¿Cuánto tiempo suele tomar la conciliación?
         </div>
 
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Quiere resolver un problema legal ...?
+          ¿Es más económico que una demanda con un abogado?
         </div>
 
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Está enfrentando una situación laboral ...?
+          ¿Qué hace diferente a Leidy Conciliadora?
         </div>
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Le preocupa cometer un error ...?
+          ¿A qué tipo de personas les recomiendas NO conciliar?
         </div>
 
         <div className={styles.item}>
           <span className={styles.icon}>✔</span>
-          ¿Siente que su abogado actual ...?
+          ¿Cuál es el primer paso si quiero conciliar contigo?
         </div>
       </div>
 

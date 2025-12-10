@@ -4,7 +4,10 @@ import React, { FC } from "react";
 import styles from "../styles/CallToAction.module.css";
 
 const handleClick = () => {
-  window.open("", "_blank");
+  window.open(
+    "https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0",
+    "_blank"
+  );
 };
 
 const CallToAction: FC = () => {
@@ -15,14 +18,14 @@ const CallToAction: FC = () => {
 
         <div className={styles.divider}></div>
 
-        <p className={styles.bottomText}>¡Esperamos poder ayudarlo!</p>
+        <p className={styles.bottomText}>¿NECESITAS AYUDA INMEDIATA?</p>
 
         <p className={styles.finalText}>
-          ¿Necesita ayuda inmediata? Escribanos ahora
+          Si tu conflicto no puede esperar, empecemos hoy mismo.
         </p>
 
         <button className={styles.ctaButton} onClick={handleClick}>
-          PROGRAME UNA CONSULTA
+          HABLA CON LEIDY
         </button>
       </div>
     </section>
