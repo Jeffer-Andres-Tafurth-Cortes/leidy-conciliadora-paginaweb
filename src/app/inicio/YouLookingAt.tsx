@@ -56,7 +56,7 @@ const YouLookingAt: FC = () => {
             transition={{
               duration: 0.55,
               ease: "easeOut",
-              delay: index * 0.15, // 🔥 stagger manual
+              delay: index * 0.15,
             }}
             whileHover={{ scale: 1.03, x: 6 }}
           >
