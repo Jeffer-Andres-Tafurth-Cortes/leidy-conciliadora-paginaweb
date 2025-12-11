@@ -1,6 +1,9 @@
+"use client";
+
+import { motion } from "framer-motion";
 import styles from "./styles/About.module.css";
 
-const About = () => {
+function About() {
   return (
     <section className={styles.wrapper}>
       {/* ------------------ BARRA DE PASOS ------------------ */}
@@ -10,17 +13,30 @@ const About = () => {
           { num: "2", text: "Reviso y escucho atentamente tu caso." },
           { num: "3", text: "Creo un plan de acción especial para ti." },
         ].map((step, index) => (
-          <div key={index} className={styles.stepItem}>
+          <motion.div
+            key={index}
+            className={styles.stepItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.15 }}
+          >
             <div className={styles.stepNumber}>{step.num}</div>
             <span>{step.text}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* ------------------ CONTENIDO PRINCIPAL ------------------ */}
       <div className={styles.container}>
         {/* Texto */}
-        <article className={styles.contentBox}>
+        <motion.article
+          className={styles.contentBox}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className={styles.title}>¡CONOCE A LEIDY!</h2>
 
           <p className={styles.paragraph}>
@@ -42,15 +58,21 @@ const About = () => {
           </p>
 
           <button className={styles.ctaButton}>LEER MAS SOBRE MI</button>
-        </article>
+        </motion.article>
 
         {/* Imagen */}
-        <div className={styles.imageContainer}>
+        <motion.div
+          className={styles.imageContainer}
+          initial={{ opacity: 0, scale: 0.9, x: 30 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <img src="/doc-leidy.jpg" alt="Dra. Leidy" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-};
+}
 
 export default About;
