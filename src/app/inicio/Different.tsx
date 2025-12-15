@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./styles/Different.module.css";
+import Link from "next/link";
 function Different() {
   return (
     <motion.section
@@ -59,7 +60,7 @@ function Different() {
         transition={{ duration: 0.55, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        PROGRAME UNA CONSULTA
+        <Link href="/contact">PROGRAME UNA CONSULTA</Link>
       </motion.button>
     </motion.section>
   );

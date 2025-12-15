@@ -53,6 +53,7 @@
   padding: 10px 16px;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 .contactButton:hover {
   background: #b868cd;

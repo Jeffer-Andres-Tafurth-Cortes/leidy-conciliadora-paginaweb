@@ -1,9 +1,10 @@
 "use client";
 
-import { faMailForward } from "@fortawesome/free-solid-svg-icons";
+import { faFileText } from "@fortawesome/free-solid-svg-icons";
 import styles from "./BioSection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Perfil() {
   return (
@@ -36,15 +37,17 @@ export default function Perfil() {
           <h3>Contáctenos</h3>
           <p>¿Preguntas? Será un placer ayudarle.</p>
 
-          <motion.a
-            href="mailto:"
+          <motion.button
             className={styles.contactButton}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.15 }}
           >
-            <FontAwesomeIcon icon={faMailForward} /> Enviar Correo Electrónico
-          </motion.a>
+            <Link href="/contact">
+              <FontAwesomeIcon icon={faFileText} />
+              PROGRAME UNA CONSULTA
+            </Link>
+          </motion.button>
         </motion.div>
       </motion.div>
 

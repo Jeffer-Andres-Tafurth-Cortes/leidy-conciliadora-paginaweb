@@ -2,13 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./styles/Hero.module.css";
-
-const handleClick = () => {
-  window.open(
-    "https://api.whatsapp.com/message/RE7FEN4IGOISD1?autoload=1&app_absent=0",
-    "_blank"
-  );
-};
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -40,9 +34,9 @@ export default function Hero() {
           <strong>la tranquilidad.</strong>
         </p>
 
-        <button className={styles.ctaButton} onClick={handleClick}>
-          PROGRAME UNA CONSULTA
-        </button>
+        <Link href="/contact">
+          <button className={styles.ctaButton}>PROGRAME UNA CONSULTA</button>
+        </Link>
       </motion.div>
 
       <motion.div

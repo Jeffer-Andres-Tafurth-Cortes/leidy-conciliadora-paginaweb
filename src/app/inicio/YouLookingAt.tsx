@@ -5,13 +5,7 @@ import { motion } from "framer-motion";
 import styles from "./styles/YouLookingAt.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-
-const handleClick = () => {
-  window.open(
-    "https://api.whatsapp.com/message/RE7FEN4IGOISD1?autoload=1&app_absent=0",
-    "_blank"
-  );
-};
+import Link from "next/link";
 
 const YouLookingAt: FC = () => {
   const items = [
@@ -78,11 +72,10 @@ const YouLookingAt: FC = () => {
       >
         <motion.button
           className={styles.ctaButton}
-          onClick={handleClick}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          PROGRAME UNA CONSULTA
+          <Link href="/contact">PROGRAME UNA CONSULTA</Link>
         </motion.button>
       </motion.div>
     </motion.section>

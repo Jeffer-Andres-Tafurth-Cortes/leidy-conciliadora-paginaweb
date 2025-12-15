@@ -4,13 +4,7 @@ import { faBuilding, faUsers } from "@fortawesome/free-solid-svg-icons";
 import styles from "./AreasPracticas.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-
-const handleClick = () => {
-  window.open(
-    "https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0",
-    "_blank"
-  );
-};
+import Link from "next/link";
 
 const areas = [
   {
@@ -94,13 +88,12 @@ export default function AreasPracticas() {
 
       <motion.button
         className={styles.ctaButton}
-        onClick={handleClick}
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        PROGRAME UNA CONSULTA
+        <Link href="/contact">PROGRAME UNA CONSULTA</Link>
       </motion.button>
     </section>
   );

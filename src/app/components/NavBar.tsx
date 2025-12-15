@@ -58,9 +58,9 @@ export default function NavBar() {
           </li>
         </ul>
 
-        <button className={styles.ctaButton} onClick={handleClick}>
-          PROGRAME UNA CONSULTA
-        </button>
+        <Link href="/contact">
+          <button className={styles.ctaButton}>PROGRAME UNA CONSULTA</button>
+        </Link>
 
         {/* BOTÓN HAMBURGUESA */}
         <div
