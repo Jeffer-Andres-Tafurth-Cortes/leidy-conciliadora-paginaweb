@@ -3,7 +3,8 @@
 import styles from "./contact.module.css";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHandPointLeft } from "@fortawesome/free-solid-svg-icons";
+import { faMailForward } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function AgendaLlamada() {
   return (
@@ -49,7 +50,7 @@ export default function AgendaLlamada() {
           viewport={{ once: true }}
         >
           <iframe
-            src=""
+            src="video-intro-leidy.mp4"
             title="Programe una consulta"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -65,27 +66,25 @@ export default function AgendaLlamada() {
           viewport={{ once: true }}
         >
           <p className={styles.intro}>
-            Complete el formulario a continuación para programar una consulta
-            legal personalizada. Estoy aquí para orientarle y ayudarle a tomar
-            la mejor decisión para su caso.
+            Estoy aquí para orientarle y ayudarle a tomar la mejor decisión para
+            su caso.
           </p>
 
           <p className={styles.highlightTitle}>¿Necesita ayuda inmediata?</p>
 
           <div className={styles.contactBox}>
             <p>
-              📞 <strong>WhatsApp:</strong>{" "}
+              <FontAwesomeIcon icon={faWhatsapp} /> <strong>WhatsApp:</strong>{" "}
               <a
                 href="https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
                 +57 321 352 5962
               </a>{" "}
-              <FontAwesomeIcon icon={faHandPointLeft} />
             </p>
 
             <p>
-              ✉️ <strong>Email:</strong>{" "}
+              <FontAwesomeIcon icon={faMailForward} /> <strong>Email:</strong>{" "}
               <a href="mailto:correo@ejemplo.com">correo doc. Leidy</a>
             </p>
           </div>
