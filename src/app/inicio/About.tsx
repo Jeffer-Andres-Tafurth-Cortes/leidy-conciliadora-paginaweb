@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./styles/About.module.css";
+import Link from "next/link";
 
 function About() {
   return (
@@ -57,7 +58,9 @@ function About() {
             paz.
           </p>
 
-          <button className={styles.ctaButton}>LEER MAS SOBRE MI</button>
+          <Link href="/perfil">
+            <button className={styles.ctaButton}>LEER MAS SOBRE MI</button>
+          </Link>
         </motion.article>
 
         {/* Imagen */}

@@ -56,29 +56,30 @@ export default function Perfil() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
+        <h3 className={styles.sectionTitle}>Perfil:</h3>
         <p className={styles.bioText}>
-          La Abogada Leidy obtuvo su B.A. (Diploma Universitario) con énfasis en
-          Ciencias Políticas y Estudios Latino-Americanos...
+          Abogada egresada de la Universidad Militar, con sólida formación y
+          experiencia en gestión comercial y asesoría jurídica estratégica.
+          Cuenta con un profundo conocimiento de la Ley 1480 de 2011 (Estatuto
+          del Consumidor) y del régimen de garantías mobiliarias, lo que le
+          permite brindar soluciones legales efectivas, prácticas y alineadas
+          con las necesidades reales de personas y empresas. Su ejercicio
+          profesional se caracteriza por un enfoque integral que combina el
+          rigor jurídico con la comprensión del contexto comercial y humano de
+          cada caso, priorizando la prevención de conflictos, la protección de
+          derechos y la construcción de acuerdos sostenibles. Actualmente se
+          desempeña como CEO de SOL Centro de Conciliación, desde donde lidera
+          procesos de resolución alternativa de conflictos, promoviendo el
+          diálogo, la conciliación y soluciones justas. Asimismo, ejerce como
+          Conciliadora en Derecho, acompañando a las partes con imparcialidad,
+          empatía y compromiso, orientada siempre a alcanzar acuerdos eficaces y
+          duraderos.
         </p>
-
-        <h3 className={styles.sectionTitle}>Licencias:</h3>
-        <p className={styles.bioText}>
-          La Abogada Leidy está certificada por la Corte Suprema...
-        </p>
-
-        <h3 className={styles.sectionTitle}>Experiencia:</h3>
-        <p className={styles.bioText}>
-          En la actualidad, la Abogada Leidy se especializa en casos...
-        </p>
-
-        <h3 className={styles.sectionTitle}>Idiomas:</h3>
-        <p className={styles.bioText}>Español e Inglés</p>
 
         <h3 className={styles.sectionTitle}>Asociaciones Profesionales:</h3>
         <ul className={styles.list}>
-          <li>Miembro de la Junta Directiva...</li>
-          <li>Co-Director del Comité de Enlace...</li>
-          <li>Co-Director del Comité de Enlace en la Oficina de Asilos...</li>
+          <li>CEO de SOL centro de conciliación.</li>
+          <li>Conciliadora de derecho.</li>
         </ul>
       </motion.div>
     </section>
