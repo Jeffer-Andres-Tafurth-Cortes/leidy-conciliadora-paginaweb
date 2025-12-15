@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "./styles/About.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 function About() {
   return (
@@ -71,7 +72,16 @@ function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <img src="/doc-leidy.jpg" alt="Dra. Leidy" />
+          <div className={styles.imageWrapper}>
+            <Image
+              src="/doc-leidy.jpg"
+              alt="Leidy Tirado - Conciliadora en Derecho"
+              fill
+              sizes="(max-width: 992px) 100vw, 520px"
+              className={styles.image}
+              priority
+            />
+          </div>
         </motion.div>
       </div>
     </section>

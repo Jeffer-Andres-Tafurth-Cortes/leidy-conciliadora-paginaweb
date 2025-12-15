@@ -69,26 +69,37 @@
   width: 52%;
   color: var(--c-brown);
 }
-/* Contenedor de la imagen: limita tamaño y centra */
+/* CONTENEDOR GENERAL */
+/* ======================
+   IMAGEN
+====================== */
+
+/* Contenedor externo */
 .imageContainer {
-  width: 48%;
+  width: 42%; /* antes 48% */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 18px;
-  overflow: hidden;
-  max-width: 520px; /* evita que crezca demasiado en pantallas grandes */
-  min-width: 260px; /* mantiene un ancho razonable en desktop */
+  max-width: 420px; /* antes 520px */
 }
 
-/* Imagen dentro del contenedor: responsable y contenida */
-.imageContainer img {
+/* Wrapper requerido por next/image */
+.imageWrapper {
+  position: relative;
   width: 100%;
-  height: auto;
-  max-height: 420px; /* limita altura en desktop */
-  object-fit: contain; /* cubre contenedor sin deformar, recortando cuando sea necesario */
-  display: block;
+  aspect-ratio: 4 / 5; /* más vertical, menos dominante */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  background: #f6f6f6;
 }
+
+/* Imagen */
+.image {
+  object-fit: cover;
+  object-position: top;
+}
+
 .title {
   font-size: 28px;
   color: var(--c-brown);
@@ -113,37 +124,35 @@
   background: #b765d5;
   transform: translateY(-3px);
 }
+
 @media (max-width: 992px) {
   .container {
     flex-direction: column;
   }
-  .contentBox,
-  .imageContainer {
+
+  .contentBox {
     width: 100%;
-  }
-  .imageContainer {
-    width: 100%;
-    max-width: 720px;
-    min-width: auto;
-    margin-top: 18px;
   }
 
-  .imageContainer img {
-    max-height: 380px;
-    object-fit: contain; /* en pantallas medianas preferimos mostrar entero */
+  .imageContainer {
+    width: 100%;
+    max-width: 360px;
+    margin-top: 20px;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 3 / 4;
   }
 }
 
 @media (max-width: 480px) {
   .imageContainer {
-    width: 100%;
-    max-width: 100%;
-    margin-top: 12px;
+    max-width: 280px;
+    margin-top: 16px;
   }
 
-  .imageContainer img {
-    max-height: 260px;
-    object-fit: contain;
-    border-radius: 10px;
+  .imageWrapper {
+    aspect-ratio: 2.8 / 4;
+    border-radius: 12px;
   }
 }
