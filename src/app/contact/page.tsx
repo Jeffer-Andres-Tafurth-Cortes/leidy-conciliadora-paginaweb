@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMailForward } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 export default function AgendaLlamada() {
   return (
@@ -16,17 +17,19 @@ export default function AgendaLlamada() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className={styles.logo}>
-          <img
-            src="logo-leidy1.jpg"
-            alt="logo-Leidy"
-            className={styles.logoMark}
-          />
-          <div>
-            <h1>LEIDY TIRADO</h1>
-            <p>CONCILIADORA LEGAL</p>
+        <Link href="/">
+          <div className={styles.logo}>
+            <img
+              src="logo-leidy1.jpg"
+              alt="logo-Leidy"
+              className={styles.logoMark}
+            />
+            <div>
+              <h1>LEIDY TIRADO</h1>
+              <p>TU CONCILIADORA LEGAL</p>
+            </div>
           </div>
-        </div>
+        </Link>
 
         <motion.a
           href="https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0"
