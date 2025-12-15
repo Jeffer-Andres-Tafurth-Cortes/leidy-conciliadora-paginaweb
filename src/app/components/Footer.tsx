@@ -57,10 +57,7 @@ const Footer: FC = () => {
               <span aria-label="Correo" role="img">
                 <FontAwesomeIcon icon={faMailForward} />
               </span>
-              <a
-                href="mailto:info.pravice@abogadosespecialistas.com.co"
-                className={styles.link}
-              >
+              <a href="mailto:" className={styles.link}>
                 correo Doc. Leidy
               </a>
             </li>

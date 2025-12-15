@@ -65,10 +65,15 @@
 /* ================================
    TEXT + LISTS
 ================================ */
+.contactList {
+  list-style: none;
+  padding-left: 0;
+}
+
 .contactList li {
   display: flex;
   gap: 8px;
-  align-items: center;
+  align-items: start;
   color: var(--c-brown);
   margin-bottom: 8px;
   font-size: 14px;
