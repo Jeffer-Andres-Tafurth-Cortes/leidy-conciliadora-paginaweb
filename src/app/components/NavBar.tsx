@@ -6,13 +6,6 @@ import Link from "next/link";
 import styles from "../styles/NavBar.module.css";
 import Image from "next/image";
 
-const handleClick = () => {
-  window.open(
-    "https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0",
-    "_blank"
-  );
-};
-
 export default function NavBar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,8 +27,8 @@ export default function NavBar() {
           <Image
             src="/logoleidy.jpg"
             alt="logo leidy1"
-            width={85}
-            height={85}
+            width={80}
+            height={80}
           />
         </Link>
 
