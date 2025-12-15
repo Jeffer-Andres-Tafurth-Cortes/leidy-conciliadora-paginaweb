@@ -51,7 +51,7 @@ export default function AgendaLlamada() {
         >
           <iframe
             src="video-intro-leidy.mp4"
-            title="Programe una consulta"
+            title="video para explicativo - programe una consulta"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
