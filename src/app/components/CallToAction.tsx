@@ -1,6 +1,5 @@
 "use client";
 
-import React, { FC } from "react";
 import styles from "../styles/CallToAction.module.css";
 
 const handleClick = () => {
@@ -10,7 +9,7 @@ const handleClick = () => {
   );
 };
 
-const CallToAction: FC = () => {
+function CallToAction() {
   return (
     <section className={styles.ctaSection}>
       <div className={styles.contentWrapper}>
@@ -30,6 +29,6 @@ const CallToAction: FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default CallToAction;

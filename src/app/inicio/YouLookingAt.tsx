@@ -1,13 +1,12 @@
 "use client";
 
-import React, { FC } from "react";
 import { motion } from "framer-motion";
 import styles from "./styles/YouLookingAt.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-const YouLookingAt: FC = () => {
+function YouLookingAt() {
   const items = [
     "¿Qué tipo de problemas legales se pueden conciliar?",
     "¿Pierdo mis derechos si acepto conciliar o llegar a un acuerdo?",
@@ -80,6 +79,6 @@ const YouLookingAt: FC = () => {
       </motion.div>
     </motion.section>
   );
-};
+}
 
 export default YouLookingAt;

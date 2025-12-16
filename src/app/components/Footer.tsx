@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useEffect } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -10,6 +10,7 @@ import {
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import styles from "../styles/Footer.module.css";
+import Link from "next/link";
 
 const handleClick = () => {
   window.open(
@@ -17,8 +18,7 @@ const handleClick = () => {
     "_blank"
   );
 };
-
-const Footer: FC = () => {
+function Footer() {
   // Cargar script de Instagram una sola vez
   useEffect(() => {
     const script = document.createElement("script");
@@ -31,18 +31,23 @@ const Footer: FC = () => {
     <footer className={styles.footer}>
       <div className={styles.topSection}>
         {/* Logo */}
-        <div className={styles.logoSection}>
-          <Image
-            src="/logo-leidy1.jpg"
-            alt="Dra. Leidy Tirado"
-            className={styles.logo}
-            width={100}
-            height={100}
-            priority={true}
-          />
-          <p className={styles.subtitle}>LEIDY TIRADO</p>
-        </div>
-
+        <Link
+          href="https://www.instagram.com/leidytuconciliadora/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className={styles.logoSection}>
+            <Image
+              src="/logo-leidy1.jpg"
+              alt="Dra. Leidy Tirado"
+              className={styles.logo}
+              width={100}
+              height={100}
+              priority={true}
+            />
+            <p className={styles.subtitle}>LEIDY TIRADO</p>
+          </div>
+        </Link>
         {/* Contáctanos */}
         <div className={styles.contactSection}>
           <h3 className={styles.title}>CONTÁCTANOS</h3>
@@ -69,7 +74,6 @@ const Footer: FC = () => {
             </li>
           </ul>
         </div>
-
         {/* Síguenos */}
         <div className={styles.followSection}>
           <h3 className={styles.title}>SÍGUENOS</h3>
@@ -84,7 +88,6 @@ const Footer: FC = () => {
             </a>
           </div>
         </div>
-
         {/* ========================= */}
         {/* FEED DE INSTAGRAM */}
         {/* ========================= */}
@@ -125,6 +128,6 @@ const Footer: FC = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

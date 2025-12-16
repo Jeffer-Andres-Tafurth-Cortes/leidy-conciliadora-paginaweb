@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "./styles/Different.module.css";
 import Link from "next/link";
+
 function Different() {
   return (
     <motion.section
