@@ -15,7 +15,7 @@ import Link from "next/link";
 const handleClick = () => {
   window.open(
     "https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0",
-    "_blank"
+    "_blank",
   );
 };
 function Footer() {
@@ -74,20 +74,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        {/* Síguenos */}
-        <div className={styles.followSection}>
-          <h3 className={styles.title}>SÍGUENOS</h3>
-          <div className={styles.socialIcons}>
-            <a
-              href="https://www.instagram.com/leidytuconciliadora/"
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-          </div>
-        </div>
+
         {/* ========================= */}
         {/* FEED DE INSTAGRAM */}
         {/* ========================= */}
@@ -103,7 +90,7 @@ function Footer() {
               border: 0,
               margin: "0 auto",
               padding: 0,
-              maxWidth: "350px",
+              maxWidth: "450px",
               width: "100%",
             }}
           ></blockquote>
