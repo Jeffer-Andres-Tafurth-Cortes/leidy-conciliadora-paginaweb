@@ -7,7 +7,7 @@ import {
   faMailForward,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import styles from "../styles/Footer.module.css";
 import Link from "next/link";
