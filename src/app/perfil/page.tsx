@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Perfil() {
   return (
     <section className={styles.wrapper}>
-      {/* COLUMNA IZQUIERDA */}
+      {/* ================= COLUMNA IZQUIERDA ================= */}
       <motion.div
         className={styles.leftColumn}
         initial={{ opacity: 0, x: -40 }}
@@ -47,11 +47,7 @@ export default function Perfil() {
           <h3>Contáctenos</h3>
           <p>¿Preguntas? Será un placer ayudarle.</p>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.15 }}
-          >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link href="/contact" className={styles.contactButton}>
               <FontAwesomeIcon icon={faFileText} />
               <span>PROGRAME UNA CONSULTA</span>
@@ -60,7 +56,7 @@ export default function Perfil() {
         </motion.div>
       </motion.div>
 
-      {/* COLUMNA DERECHA */}
+      {/* ================= COLUMNA DERECHA ================= */}
       <motion.div
         className={styles.rightColumn}
         initial={{ opacity: 0, x: 40 }}
@@ -73,21 +69,10 @@ export default function Perfil() {
         <p className={styles.bioText}>
           Abogada egresada de la Universidad Militar, con sólida formación y
           experiencia en gestión comercial y asesoría jurídica estratégica.
-          Cuenta con un profundo conocimiento de la Ley 1480 de 2011 (Estatuto
-          del Consumidor) y del régimen de garantías mobiliarias, lo que le
-          permite brindar soluciones legales efectivas, prácticas y alineadas
-          con las necesidades reales de personas y empresas.
           <br />
           <br />
-          Su ejercicio profesional se caracteriza por un enfoque integral que
-          combina el rigor jurídico con la comprensión del contexto comercial y
-          humano de cada caso, priorizando la prevención de conflictos, la
-          protección de derechos y la construcción de acuerdos sostenibles.
-          Actualmente se desempeña como CEO de SOL Centro de Conciliación, desde
-          donde lidera procesos de resolución alternativa de conflictos,
-          promoviendo el diálogo, la conciliación y soluciones justas. Asimismo,
-          ejerce como Conciliadora en Derecho, acompañando a las partes con
-          imparcialidad, empatía y compromiso.
+          Actualmente se desempeña como CEO de SOL Centro de Conciliación y
+          Conciliadora en Derecho.
         </p>
 
         <h3 className={styles.sectionTitle}>Asociaciones Profesionales</h3>
@@ -96,6 +81,26 @@ export default function Perfil() {
           <li>CEO de SOL Centro de Conciliación</li>
           <li>Conciliadora en Derecho</li>
         </ul>
+      </motion.div>
+
+      {/* ================= MAPA ================= */}
+      <motion.div
+        className={styles.mapWrapper}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h3 className={styles.mapTitle}>Ubicación de la oficina</h3>
+
+        <div className={styles.mapContainer}>
+          <iframe
+            title="Ubicación oficina Pravice"
+            src="https://www.google.com/maps?q=Abogados%20Especialistas%20Pravice%20Bogot%C3%A1&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </motion.div>
     </section>
   );

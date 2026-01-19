@@ -111,6 +111,26 @@ export default function AgendaLlamada() {
           consulta legal y recibe asesoría confiable y eficaz.
         </p>
       </motion.div>
+
+      {/* ================= MAPA ================= */}
+      <motion.div
+        className={styles.mapWrapper}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h3 className={styles.mapTitle}>Ubicación de la oficina</h3>
+
+        <div className={styles.mapContainer}>
+          <iframe
+            title="Ubicación oficina Pravice"
+            src="https://www.google.com/maps?q=Abogados%20Especialistas%20Pravice%20Bogot%C3%A1&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
