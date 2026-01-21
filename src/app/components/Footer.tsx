@@ -7,19 +7,23 @@ import {
   faMailForward,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import styles from "../styles/Footer.module.css";
 import Link from "next/link";
 
-const handleClick = () => {
+const handleWhatsAppClick = () => {
   window.open(
     "https://api.whatsapp.com/send/?phone=573213525962&text&type=phone_number&app_absent=0",
     "_blank",
   );
 };
-function Footer() {
-  // Cargar script de Instagram una sola vez
+
+const handleInstagramClick = () => {
+  window.open("https://www.instagram.com/leidytuconciliadora/", "_blank");
+};
+
+export default function Footer() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://www.instagram.com/embed.js";
@@ -29,8 +33,9 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
+      {/* TOP SECTION */}
       <div className={styles.topSection}>
-        {/* Logo */}
+        {/* LOGO */}
         <Link
           href="https://www.instagram.com/leidytuconciliadora/"
           target="_blank"
@@ -41,58 +46,42 @@ function Footer() {
               src="/logo-leidy1.jpg"
               alt="Dra. Leidy Tirado"
               className={styles.logo}
-              width={100}
-              height={100}
-              priority={true}
+              width={110}
+              height={110}
+              priority
             />
             <p className={styles.subtitle}>LEIDY TIRADO</p>
           </div>
         </Link>
-        {/* Contáctanos */}
+
+        {/* CONTACTO */}
         <div className={styles.contactSection}>
           <h3 className={styles.title}>CONTÁCTANOS</h3>
           <ul className={styles.contactList}>
             <li>
-              <span aria-label="Dirección" role="img">
-                <FontAwesomeIcon icon={faLocationDot} />
-              </span>
+              <FontAwesomeIcon icon={faLocationDot} />
               Calle 98 # 22-64 OF 716
             </li>
             <li>
-              <span aria-label="Correo" role="img">
-                <FontAwesomeIcon icon={faMailForward} />
-              </span>
+              <FontAwesomeIcon icon={faMailForward} />
               <a href="mailto:" className={styles.link}>
                 correo Doc. Leidy
               </a>
             </li>
             <li>
-              <span aria-label="Teléfono" role="img">
-                <FontAwesomeIcon icon={faPhone} />
-              </span>
+              <FontAwesomeIcon icon={faPhone} />
               +57 321 3525962
             </li>
           </ul>
         </div>
 
-        {/* ========================= */}
-        {/* FEED DE INSTAGRAM */}
-        {/* ========================= */}
+        {/* INSTAGRAM FEED */}
         <div className={styles.instagramFeed}>
           <h3 className={styles.title}>FEED DE INSTAGRAM</h3>
-
           <blockquote
             className="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/leidytuconciliadora/"
             data-instgrm-version="14"
-            style={{
-              background: "#fff",
-              border: 0,
-              margin: "0 auto",
-              padding: 0,
-              maxWidth: "450px",
-              width: "100%",
-            }}
           ></blockquote>
         </div>
       </div>
@@ -103,12 +92,20 @@ function Footer() {
         © {new Date().getFullYear()} Abogada Leidy Tirado
       </div>
 
-      {/* Botón fijo de WhatsApp */}
+      {/* BOTONES FIJOS */}
       <div className={styles.fixedButtons}>
         <button
+          className={styles.instagramBtn}
+          aria-label="Instagram"
+          onClick={handleInstagramClick}
+        >
+          <FontAwesomeIcon icon={faInstagram} />
+        </button>
+
+        <button
           className={styles.phoneBtn}
-          aria-label="Llamar"
-          onClick={handleClick}
+          aria-label="WhatsApp"
+          onClick={handleWhatsAppClick}
         >
           <FontAwesomeIcon icon={faWhatsapp} />
         </button>
@@ -116,5 +113,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

@@ -1,49 +1,133 @@
+/* ===========================
+        TOP BAR
+=========================== */
+
 .topBar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+
   background-color: var(--c-brown);
   color: var(--c-cream);
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
   padding: 6px 20px;
   font-size: 15px;
+
   z-index: 1200;
   border-bottom: 2px solid var(--c-gold);
 }
 
+/* ===========================
+        SECCIONES
+=========================== */
+
 .leftSection,
 .rightSection {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 14px;
 }
+
+/* ===========================
+        INFO ITEMS
+=========================== */
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Iconos de info (correo / teléfono) */
+.icon {
+  font-size: 15px;
+  color: var(--c-gold);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================
+        EMAIL LINK
+=========================== */
+
 .emailLink {
   color: var(--c-cream);
-  transition: color 0.2s ease;
+  text-decoration: none;
+  transition: color 0.25s ease;
 }
+
 .emailLink:hover {
   color: var(--c-purple);
 }
-.socialIcon {
-  color: var(--c-cream);
-  transition: transform 0.15s ease, color 0.15s ease;
-  font-size: 18px;
-}
-.socialIcon:hover {
-  color: var(--c-gold);
-  transform: translateY(-2px);
+
+/* ===========================
+        ICONOS SOCIALES
+=========================== */
+
+.rightSection a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  transition: background-color 0.25s ease;
 }
 
+.socialIcon {
+  font-size: 24px;
+  color: var(--c-cream);
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Hover elegante */
+.rightSection a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.rightSection a:hover .socialIcon {
+  color: var(--c-gold);
+  transform: scale(1.12);
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+/* Tablet y móvil */
 @media (max-width: 768px) {
   .leftSection {
     display: none;
   }
+
   .topBar {
     justify-content: center;
     padding: 6px 12px;
     font-size: 12px;
+  }
+
+  .rightSection {
+    gap: 12px;
+  }
+
+  .rightSection a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .socialIcon {
+    font-size: 17px;
   }
 }
