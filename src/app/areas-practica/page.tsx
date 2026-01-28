@@ -8,27 +8,51 @@ import Link from "next/link";
 
 const areas = [
   {
-    title: "PERSONAS",
+    title: "PERSONAS NATURALES",
     frontIcon: <FontAwesomeIcon icon={faUsers} className={styles.icon} />,
     frontText:
-      "El derecho laboral regula la relación entre empleadores y trabajadores, asegurando el cumplimiento de normas sobre contratación, despidos, seguridad social, prestaciones y condiciones de trabajo.",
+      "Brindamos asesoría y conciliación legal a personas naturales que enfrentan conflictos civiles, familiares o laborales, buscando soluciones ágiles, seguras y acordes a la ley colombiana.",
     backList: [
-      "Prevencion y manejo de conflictos laborales para evitar demandas y sanciones.",
-      "Asesoría en contratación, despidos y normativas laborales vigentes.",
-      "Defensa en procesos judiciales o administrativos ante inspecciones o reclamaciones.",
-      "Diseño de estrategias para la estabilidad y seguridad legal de tu empresa.",
+      "Conciliación extrajudicial en conflictos civiles y contractuales.",
+      "Asesoría legal preventiva para evitar procesos judiciales.",
+      "Solución de conflictos entre particulares de manera pacífica.",
+      "Acompañamiento jurídico claro y personalizado en cada caso.",
     ],
   },
   {
-    title: "EMPRESAS",
+    title: "EMPRESAS Y EMPLEADORES",
     frontIcon: <FontAwesomeIcon icon={faBuilding} className={styles.icon} />,
     frontText:
-      "Esta área regula relaciones entre personas, protegiendo derechos sobre bienes, contratos, herencias, responsabilidad civil y otros aspectos de la vida cotidiana. Se encarga de resolver disputas sobre propiedad, incumplimiento de acuerdos y daños y perjuicios.",
+      "Asesoramos a empresas en derecho laboral y conciliación legal, ayudándolas a prevenir conflictos, cumplir la normativa vigente y proteger su estabilidad jurídica.",
     backList: [
-      "Redacción y revisión de contratos para evitar riesgos legales.",
-      "Acompañamiento en disputas civiles, como incumplimiento contractuales o daños y perjuicios.",
-      "Protección y defensa en procesos de propiedad, herencias y sucesiones.",
-      "Soluciones jurídicas personalizadas para cada caso",
+      "Prevención y manejo de conflictos laborales con trabajadores.",
+      "Conciliación laboral para evitar demandas y sanciones.",
+      "Asesoría en contratación, despidos y obligaciones legales.",
+      "Acompañamiento en inspecciones y requerimientos del Ministerio de Trabajo.",
+    ],
+  },
+  {
+    title: "CONCILIACIÓN EN DERECHO",
+    frontIcon: <FontAwesomeIcon icon={faUsers} className={styles.icon} />,
+    frontText:
+      "Prestamos servicios de conciliación en derecho como mecanismo alternativo de solución de conflictos, permitiendo acuerdos legales sin necesidad de acudir a procesos judiciales largos.",
+    backList: [
+      "Conciliación extrajudicial conforme a la normativa colombiana.",
+      "Reducción de costos y tiempos frente a procesos judiciales.",
+      "Acuerdos con validez legal y seguridad jurídica.",
+      "Atención imparcial, profesional y confidencial.",
+    ],
+  },
+  {
+    title: "ASESORÍA JURÍDICA PREVENTIVA",
+    frontIcon: <FontAwesomeIcon icon={faBuilding} className={styles.icon} />,
+    frontText:
+      "Orientación legal estratégica enfocada en prevenir conflictos, proteger derechos y tomar decisiones informadas antes de que surjan disputas legales.",
+    backList: [
+      "Análisis legal de situaciones contractuales y laborales.",
+      "Identificación de riesgos jurídicos potenciales.",
+      "Recomendaciones claras y aplicables a cada caso.",
+      "Acompañamiento continuo para personas y empresas.",
     ],
   },
 ];
@@ -36,16 +60,6 @@ const areas = [
 export default function AreasPracticas() {
   return (
     <section className={styles.container}>
-      <motion.p
-        className={styles.subtitle}
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
-      >
-        SOMOS ESPECIALISTAS EN
-      </motion.p>
-
       <motion.h2
         className={styles.title}
         initial={{ opacity: 0, y: -10 }}
@@ -53,7 +67,7 @@ export default function AreasPracticas() {
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
       >
-        ÁREAS DE PRÁCTICA
+        ÁREAS DE PRÁCTICA Y SERVICIOS DE CONCILIACIÓN
       </motion.h2>
 
       <div className={styles.grid}>
@@ -93,7 +107,7 @@ export default function AreasPracticas() {
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <Link href="/contact">PROGRAME UNA CONSULTA</Link>
+        <Link href="/contact">SOLICITAR CONSULTA LEGAL</Link>
       </motion.button>
     </section>
   );

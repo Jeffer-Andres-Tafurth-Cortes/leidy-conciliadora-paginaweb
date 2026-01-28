@@ -45,7 +45,13 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        <video autoPlay muted loop playsInline>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-label="Video de presentación de asesoría legal y conciliación en derecho"
+        >
           <source src="/video-intro-leidy.mp4" type="video/mp4" />
         </video>
       </motion.div>

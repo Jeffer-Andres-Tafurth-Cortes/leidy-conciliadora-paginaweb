@@ -33,51 +33,70 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      {/* TOP SECTION */}
+      {/* =======================
+          SECCIÓN SUPERIOR
+      ======================= */}
       <div className={styles.topSection}>
-        {/* LOGO */}
-        <Link
-          href="https://www.instagram.com/leidytuconciliadora/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className={styles.logoSection}>
+        {/* LOGO + DESCRIPCIÓN */}
+        <div className={styles.logoSection}>
+          <Link
+            href="/"
+            aria-label="Leidy Tirado abogada conciliadora en Colombia"
+          >
             <Image
               src="/logo-leidy1.jpg"
-              alt="Dra. Leidy Tirado"
+              alt="Leidy Tirado, abogada conciliadora en Colombia"
               className={styles.logo}
               width={110}
               height={110}
               priority
             />
-            <p className={styles.subtitle}>LEIDY TIRADO</p>
-          </div>
-        </Link>
+          </Link>
 
-        {/* CONTACTO */}
-        <div className={styles.contactSection}>
-          <h3 className={styles.title}>CONTÁCTANOS</h3>
+          <p className={styles.subtitle}>LEIDY TIRADO</p>
+
+          <p className={styles.description}>
+            Abogada conciliadora en derecho, especializada en conciliación
+            legal, resolución de conflictos y asesoría jurídica preventiva para
+            personas y empresas en Colombia.
+          </p>
+        </div>
+
+        {/* CONTACTO LEGAL (NAP SEO) */}
+        <address className={styles.contactSection}>
+          <h3 className={styles.title}>Contacto legal</h3>
+
           <ul className={styles.contactList}>
             <li>
               <FontAwesomeIcon icon={faLocationDot} />
-              Calle 98 # 22-64 OF 716
+              Bogotá, Colombia – Calle 98 #22-64 Oficina 716
             </li>
-            <li>
-              <FontAwesomeIcon icon={faMailForward} />
-              <a href="mailto:" className={styles.link}>
-                correo Doc. Leidy
-              </a>
-            </li>
+
             <li>
               <FontAwesomeIcon icon={faPhone} />
-              +57 321 3525962
+              <a href="tel:+573213525962" className={styles.link}>
+                +57 321 352 5962
+              </a>
+            </li>
+
+            <li>
+              <FontAwesomeIcon icon={faMailForward} />
+              <a href="mailto:contacto@leidytirado.com" className={styles.link}>
+                contacto@leidytirado.com
+              </a>
             </li>
           </ul>
-        </div>
+        </address>
 
-        {/* INSTAGRAM FEED */}
+        {/* INSTAGRAM */}
         <div className={styles.instagramFeed}>
-          <h3 className={styles.title}>FEED DE INSTAGRAM</h3>
+          <h3 className={styles.title}>Contenido jurídico en Instagram</h3>
+
+          <p className={styles.instagramText}>
+            Publicaciones educativas sobre conciliación legal, derechos,
+            resolución de conflictos y asesoría jurídica en Colombia.
+          </p>
+
           <blockquote
             className="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/leidytuconciliadora/"
@@ -88,15 +107,21 @@ export default function Footer() {
 
       <hr className={styles.divider} />
 
+      {/* =======================
+          SECCIÓN INFERIOR
+      ======================= */}
       <div className={styles.bottomSection}>
-        © {new Date().getFullYear()} Abogada Leidy Tirado
+        © {new Date().getFullYear()} Leidy Tirado – Abogada conciliadora en
+        Colombia · Conciliación legal · Resolución de conflictos
       </div>
 
-      {/* BOTONES FIJOS */}
+      {/* =======================
+          BOTONES FLOTANTES
+      ======================= */}
       <div className={styles.fixedButtons}>
         <button
           className={styles.instagramBtn}
-          aria-label="Instagram"
+          aria-label="Instagram de Leidy Tirado abogada conciliadora"
           onClick={handleInstagramClick}
         >
           <FontAwesomeIcon icon={faInstagram} />
@@ -104,7 +129,7 @@ export default function Footer() {
 
         <button
           className={styles.phoneBtn}
-          aria-label="WhatsApp"
+          aria-label="Contactar por WhatsApp a Leidy Tirado abogada conciliadora"
           onClick={handleWhatsAppClick}
         >
           <FontAwesomeIcon icon={faWhatsapp} />

@@ -26,9 +26,10 @@ export default function NavBar() {
         <Link href="/" className={`${styles.logo} ${styles.dark}`}>
           <Image
             src="/logoleidy.jpg"
-            alt="logo leidy1"
+            alt="Leidy Tirado, abogada conciliadora en Colombia"
             width={80}
             height={80}
+            priority
           />
         </Link>
 
@@ -41,18 +42,22 @@ export default function NavBar() {
           </li>
           <li>
             <Link href="/perfil" onClick={() => setMenuOpen(false)}>
-              PERFIL ABOGADA
+              ABOGADA CONCILIADORA
             </Link>
           </li>
           <li>
             <Link href="/areas-practica" onClick={() => setMenuOpen(false)}>
-              ÁREAS DE PRÁCTICA
+              SERVICIOS LEGALES
             </Link>
           </li>
         </ul>
 
-        <Link href="/contact">
-          <button className={styles.ctaButton}>PROGRAME UNA CONSULTA</button>
+        <Link
+          href="/contact"
+          className={styles.ctaButton}
+          aria-label="Programar consulta con abogada conciliadora"
+        >
+          CONSULTA LEGAL
         </Link>
 
         {/* BOTÓN HAMBURGUESA */}

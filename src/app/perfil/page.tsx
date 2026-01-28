@@ -27,7 +27,7 @@ export default function Perfil() {
           <div className={styles.photoWrapper}>
             <Image
               src="/doc-leidy.jpg"
-              alt="Leidy Tirado - Conciliadora en Derecho"
+              alt="Leidy Tirado, abogada y conciliadora en derecho especializada en conciliación legal"
               fill
               sizes="(max-width: 900px) 100vw, 320px"
               className={styles.photo}
@@ -44,8 +44,10 @@ export default function Perfil() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h3>Contáctenos</h3>
-          <p>¿Preguntas? Será un placer ayudarle.</p>
+          <p>
+            ¿Tiene un conflicto legal o necesita orientación en conciliación?
+            Será un placer asesorarle.
+          </p>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link href="/contact" className={styles.contactButton}>
@@ -64,22 +66,47 @@ export default function Perfil() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h3 className={styles.sectionTitle}>Perfil Profesional</h3>
+        <h3 className={styles.sectionTitle}>
+          Perfil profesional - Abogada y Conciliadora en Derecho
+        </h3>
 
         <p className={styles.bioText}>
-          Abogada egresada de la Universidad Militar, con sólida formación y
-          experiencia en gestión comercial y asesoría jurídica estratégica.
+          <strong>Leidy Tirado</strong> es abogada egresada de la Universidad
+          Militar, con amplia experiencia en{" "}
+          <strong>conciliación en derecho</strong>, asesoría jurídica
+          estratégica y mecanismos alternativos de solución de conflictos.
           <br />
           <br />
-          Actualmente se desempeña como CEO de SOL Centro de Conciliación y
-          Conciliadora en Derecho.
+          Su ejercicio profesional se enfoca en acompañar a personas y empresas
+          en procesos de <strong>conciliación legal</strong>, prevención de
+          litigios y resolución efectiva de conflictos civiles, comerciales y
+          laborales, priorizando acuerdos claros, ágiles y jurídicamente
+          seguros.
+          <br />
+          <br />
+          Actualmente se desempeña como{" "}
+          <strong>CEO de SOL Centro de Conciliación</strong>y como{" "}
+          <strong>Conciliadora en Derecho</strong>, brindando servicios
+          profesionales orientados a la resolución pacífica de controversias
+          conforme a la normativa colombiana.
         </p>
 
-        <h3 className={styles.sectionTitle}>Asociaciones Profesionales</h3>
+        <h3 className={styles.sectionTitle}>
+          Experiencia y ejercicio profesional
+        </h3>
 
         <ul className={styles.list}>
-          <li>CEO de SOL Centro de Conciliación</li>
-          <li>Conciliadora en Derecho</li>
+          <li>
+            CEO de <strong>SOL Centro de Conciliación</strong>
+          </li>
+          <li>
+            <strong>Conciliadora en Derecho</strong> habilitada para la
+            resolución legal de conflictos
+          </li>
+          <li>
+            Experiencia en conciliación extrajudicial y asesoría jurídica
+            preventiva
+          </li>
         </ul>
       </motion.div>
 
@@ -91,7 +118,9 @@ export default function Perfil() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h3 className={styles.mapTitle}>Ubicación de la oficina</h3>
+        <h3 className={styles.mapTitle}>
+          Oficina de conciliación legal - Atención presencial
+        </h3>
 
         <div className={styles.mapContainer}>
           <iframe

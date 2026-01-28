@@ -16,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  gap: 1rem;
 }
 
 /* LOGO */
@@ -23,6 +24,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  cursor: pointer;
 }
 
 .logoMark {
@@ -56,6 +58,7 @@
   padding: 0.6rem 1.25rem;
   border-radius: 30px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .headerCta:hover {
@@ -76,6 +79,10 @@
 /* ======================
    VIDEO
 ====================== */
+.videoWrapper {
+  width: 100%;
+}
+
 .videoWrapper iframe {
   width: 100%;
   height: 315px;
@@ -156,11 +163,10 @@
 }
 
 /* ======================
-   MAPA (DEBAJO DE AMBAS COLUMNAS)
+   MAPA (DEBAJO DEL CONTENIDO)
 ====================== */
 .mapWrapper {
-  grid-column: 1 / -1; /* ocupa las dos columnas */
-  margin-top: 60px;
+  margin-top: 5rem;
   text-align: center;
 }
 
@@ -168,7 +174,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--c-brown);
-  margin-bottom: 22px;
+  margin-bottom: 1.5rem;
 }
 
 .mapContainer {
@@ -193,12 +199,15 @@
   .section {
     padding: 8rem 1rem;
   }
+
+  .content {
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    gap: 1.25rem;
     text-align: center;
   }
 
@@ -226,6 +235,10 @@
   .bottom h2 {
     font-size: 1.6rem;
   }
+
+  .mapContainer iframe {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -237,5 +250,13 @@
   .contactBox p,
   .bottom p {
     font-size: 0.95rem;
+  }
+
+  .mapTitle {
+    font-size: 1.3rem;
+  }
+
+  .mapContainer iframe {
+    height: 260px;
   }
 }
