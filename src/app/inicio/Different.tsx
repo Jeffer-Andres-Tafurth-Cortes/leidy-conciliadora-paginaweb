@@ -21,7 +21,7 @@ function Different() {
         viewport={{ once: true }}
         transition={{ duration: 0.55 }}
       >
-        ¿ QUÉ HACE DIFERENTE A LEIDY CONCILIADORA?
+        ¿QUÉ HACE DIFERENTE A LEIDY CONCILIADORA?
       </motion.h2>
 
       {/* Párrafo 1 */}
