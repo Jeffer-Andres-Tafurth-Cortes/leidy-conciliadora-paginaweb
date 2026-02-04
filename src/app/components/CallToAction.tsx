@@ -15,7 +15,7 @@ function CallToAction() {
         </p>
 
         <p className={styles.finalText}>
-          Conecte ahora con una abogada conciliadora en Colombia y reciba
+          Contacte ahora con una abogada conciliadora en Colombia y reciba
           asesoría profesional para resolver su situación de forma legal, rápida
           y efectiva.
         </p>

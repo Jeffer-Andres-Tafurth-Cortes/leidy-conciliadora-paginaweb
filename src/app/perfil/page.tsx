@@ -45,8 +45,9 @@ export default function Perfil() {
           viewport={{ once: true }}
         >
           <p>
-            ¿Tiene un conflicto legal o necesita orientación en conciliación?
-            Será un placer asesorarle.
+            ¿Necesita asesoría legal o iniciar un proceso de{" "}
+            <strong>conciliación en derecho en Bogotá</strong>? Agende una
+            consulta profesional y reciba orientación clara y confiable.
           </p>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -71,28 +72,28 @@ export default function Perfil() {
         </h3>
 
         <p className={styles.bioText}>
-          <strong>Leidy Tirado</strong> es abogada egresada de la Universidad
-          Militar, con amplia experiencia en{" "}
+          <strong itemProp="name">Leidy Tirado</strong> es abogada egresada de
+          la Universidad Militar, especializada en{" "}
           <strong>conciliación en derecho</strong>, asesoría jurídica
-          estratégica y mecanismos alternativos de solución de conflictos.
+          estratégica y mecanismos alternativos de solución de conflictos en
+          Colombia.
           <br />
           <br />
-          Su ejercicio profesional se enfoca en acompañar a personas y empresas
-          en procesos de <strong>conciliación legal</strong>, prevención de
-          litigios y resolución efectiva de conflictos civiles, comerciales y
-          laborales, priorizando acuerdos claros, ágiles y jurídicamente
-          seguros.
+          Su práctica profesional está orientada a acompañar a personas y
+          empresas en procesos de <strong>conciliación legal</strong>,
+          prevención de litigios y resolución eficiente de conflictos civiles,
+          comerciales y laborales, priorizando acuerdos claros, ágiles y
+          jurídicamente seguros.
           <br />
           <br />
           Actualmente se desempeña como{" "}
-          <strong>CEO de SOL Centro de Conciliación</strong>y como{" "}
-          <strong>Conciliadora en Derecho</strong>, brindando servicios
-          profesionales orientados a la resolución pacífica de controversias
-          conforme a la normativa colombiana.
+          <strong>CEO de SOL Centro de Conciliación</strong> y como{" "}
+          <strong>Conciliadora en Derecho</strong>, brindando atención
+          profesional conforme a la normativa colombiana.
         </p>
 
         <h3 className={styles.sectionTitle}>
-          Experiencia y ejercicio profesional
+          Experiencia profesional y conciliación legal
         </h3>
 
         <ul className={styles.list}>
@@ -100,8 +101,7 @@ export default function Perfil() {
             CEO de <strong>SOL Centro de Conciliación</strong>
           </li>
           <li>
-            <strong>Conciliadora en Derecho</strong> habilitada para la
-            resolución legal de conflictos
+            <strong>Conciliadora en Derecho</strong> habilitada en Colombias
           </li>
           <li>
             Experiencia en conciliación extrajudicial y asesoría jurídica
@@ -124,7 +124,7 @@ export default function Perfil() {
 
         <div className={styles.mapContainer}>
           <iframe
-            title="Ubicación oficina Pravice"
+            title="Oficina de conciliación en derecho en Bogotá - SOL Centro de Conciliación"
             src="https://www.google.com/maps?q=Abogados%20Especialistas%20Pravice%20Bogot%C3%A1&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

@@ -93,10 +93,11 @@ export default function AgendaLlamada() {
               </a>
             </p>
 
-            <p>
+            {/**<p>
               <FontAwesomeIcon icon={faMailForward} /> <strong>Email:</strong>{" "}
-              <a href="mailto:correo@ejemplo.com">correo@leidytirado.com</a>
+              <a href="mailto:correo@ejemplo.com"></a>
             </p>
+            */}
           </div>
         </motion.div>
       </div>
@@ -142,8 +143,8 @@ export default function AgendaLlamada() {
 
         <div className={styles.mapContainer}>
           <iframe
-            title="Ubicación oficina de Leidy Tirado - Bogotá"
-            src="https://www.google.com/maps?q=Bogotá%20Colombia&output=embed"
+            title="Oficina de conciliación en derecho en Bogotá - SOL Centro de Conciliación"
+            src="https://www.google.com/maps?q=Abogados%20Especialistas%20Pravice%20Bogot%C3%A1&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

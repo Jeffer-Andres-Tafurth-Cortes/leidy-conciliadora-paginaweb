@@ -50,6 +50,11 @@ export default function NavBar() {
               SERVICIOS LEGALES
             </Link>
           </li>
+          <li>
+            <Link href="/blog" onClick={() => setMenuOpen(false)}>
+              BLOG
+            </Link>
+          </li>
         </ul>
 
         <Link

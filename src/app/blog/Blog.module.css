@@ -1,0 +1,97 @@
+.wrapper {
+  padding: 7rem 1.5rem;
+  background-color: var(--c-cream);
+}
+
+.article {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--c-brown);
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--c-black);
+  opacity: 0.85;
+}
+
+/* ================= FAQ LIST ================= */
+
+.faqList {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.faqItem {
+  padding: 1.5rem 1.5rem 1.5rem 1.8rem;
+  background-color: var(--c-primary);
+  border-left: 5px solid var(--c-purple);
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.faqItem:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.question {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--c-brown);
+  margin-bottom: 0.6rem;
+}
+
+.answer {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--c-black);
+  opacity: 0.85;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(106, 80, 42, 0.2);
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: var(--c-brown);
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(135deg, var(--c-purple), var(--c-gold));
+  color: var(--c-black);
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
